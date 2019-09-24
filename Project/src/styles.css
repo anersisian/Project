@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+  font-family: Avant;
+  src: url(assets/font/AvantGardeLT-Book.TTF) format("opentype");
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Avant";
+}
+
+body,
+html {
+  height: 100%;
+
+  /* The image used */
+  background-image: url("src/assets/images/food.jpg");
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

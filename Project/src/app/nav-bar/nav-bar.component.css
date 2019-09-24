@@ -1,0 +1,27 @@
+.navbar {
+  background-color: #0000008c;
+  color: #85cdca;
+}
+.navbar-brand {
+  font-size: 30px;
+  letter-spacing: 2px;
+  word-spacing: 1px;
+  color: #85cdca;
+  font-weight: 700;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: small-caps;
+  text-transform: capitalize;
+}
+
+li {
+  padding-right: 50px;
+}
+
+a {
+  color: rgb(3, 100, 86);
+}
+a:hover {
+  text-decoration: none;
+  color: #85cdca;
+}
