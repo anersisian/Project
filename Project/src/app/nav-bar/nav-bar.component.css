@@ -1,25 +1,33 @@
 .navbar {
   background-color: #0000008c;
-  color: #85cdca;
+  color: #f0f3f8;
+  padding: 2px 0px 2px 0px;
 }
 .navbar-brand {
   font-size: 30px;
+  color: #45a07d;
   letter-spacing: 2px;
   word-spacing: 1px;
-  color: #85cdca;
-  font-weight: 700;
+  font-weight: 900;
   text-decoration: none;
   font-style: normal;
   font-variant: small-caps;
   text-transform: capitalize;
+  padding-left: 40px;
 }
 
+.navbar-brand:hover {
+  color: white;
+}
+ul {
+  padding-right: 30px;
+}
 li {
-  padding-right: 50px;
+  padding-right: 5px;
 }
 
 a {
-  color: rgb(3, 100, 86);
+  color: #f0f3f8;
 }
 a:hover {
   text-decoration: none;

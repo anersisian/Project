@@ -1,0 +1,112 @@
+#first {
+  height: 100%;
+
+  background-image: url("src/assets/images/MainFood.jpg");
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#second {
+  height: 100%;
+
+  background-color: #45a07d;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.navbar {
+  background-color: #0000008c;
+  color: #f0f3f8;
+  padding: 2px 0px 2px 0px;
+}
+.navbar-brand {
+  font-size: 30px;
+  letter-spacing: 2px;
+  word-spacing: 1px;
+  font-weight: 700;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: small-caps;
+  text-transform: capitalize;
+  padding-left: 40px;
+}
+
+li {
+  padding-right: 50px;
+}
+
+a {
+  color: #f0f3f8;
+}
+a:hover {
+  text-decoration: none;
+  color: #85cdca;
+}
+
+/* .btn {
+  color: #45a07d;
+  border-color: #45a07d;
+  border-radius: 50%;
+  border-width: 2px;
+}
+
+i {
+  border: solid #45a07d;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+} */
+
+/* .down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.wrapper {
+  text-align: center;
+}
+
+.btn {
+  position: absolute;
+  top: 85%;
+} */
+
+.arrow {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.arrow span {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-bottom: 5px solid #45a07d;
+  border-right: 5px solid #45a07d;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 2s infinite;
+}
+.arrow span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+.arrow span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
+}
