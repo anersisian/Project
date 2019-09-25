@@ -11,7 +11,8 @@ import { LoginComponent } from "./login/login.component";
 import { FormsModule } from "@angular/forms";
 import { RouterModule, Routes } from "@angular/router";
 import { NotFoundPageComponent } from "./not-found-page/not-found-page.component";
-import { RegisterComponent } from './register/register.component';
+import { RegisterComponent } from "./register/register.component";
+import { LogoutComponent } from './logout/logout.component';
 
 const appRoutes: Routes = [{ path: "login", component: LoginComponent }];
 
@@ -22,7 +23,8 @@ const appRoutes: Routes = [{ path: "login", component: LoginComponent }];
     NavBarComponent,
     LoginComponent,
     NotFoundPageComponent,
-    RegisterComponent
+    RegisterComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
