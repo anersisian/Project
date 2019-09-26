@@ -47,7 +47,7 @@ export class RegisterComponent implements OnInit {
 
   create(credentials: Credentials): Observable<any> {
     return this.http.post<any>(
-      `${this.url}/api/useraccounts/create`,
+      `${this.url}/api/users/register`,
       credentials
     );
   }
