@@ -1,18 +1,29 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
-import { HttpClientModule } from "@angular/common/http";
+import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { AngularSvgIconModule } from "angular-svg-icon";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { MainPageComponent } from "./main-page/main-page.component";
 import { NavBarComponent } from "./nav-bar/nav-bar.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { LoginComponent } from "./login/login.component";
 import { FormsModule } from "@angular/forms";
 import { RouterModule, Routes } from "@angular/router";
 import { NotFoundPageComponent } from "./not-found-page/not-found-page.component";
+import { DataModelManagerService } from './data-model-manager.service';
+
+//kek modules
+import { AuthService } from './auth.service';
+import { GuardAuthService } from './guard-auth.service';
+import { LoginComponent } from "./login/login.component";
 import { RegisterComponent } from "./register/register.component";
 import { LogoutComponent } from './logout/logout.component';
+import { InterceptTokenService } from './intercept-token.service';
+import { JwtModule } from '@auth0/angular-jwt';
+
+export function tokenGetter() {
+  return localStorage.getItem('access_token');
+}
 
 const appRoutes: Routes = [{ path: "login", component: LoginComponent }];
 
@@ -24,7 +35,7 @@ const appRoutes: Routes = [{ path: "login", component: LoginComponent }];
     LoginComponent,
     NotFoundPageComponent,
     RegisterComponent,
-    LogoutComponent
+    LogoutComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,9 +45,24 @@ const appRoutes: Routes = [{ path: "login", component: LoginComponent }];
     BrowserAnimationsModule,
     FormsModule,
     RouterModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: tokenGetter,
+        authScheme: 'JWT'
+      }
+    })
   ],
-  providers: [],
+  providers: [
+    DataModelManagerService,
+    AuthService,
+    GuardAuthService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: InterceptTokenService,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

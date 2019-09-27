@@ -5,13 +5,13 @@ import { Observable } from "rxjs";
 import { JwtHelperService } from "@auth0/angular-jwt";
 
 import { map } from "rxjs/operators";
-// import { Credentials } from "./login/login.component";
+import { Credentials } from "./login/login.component";
 
 @Injectable()
 export class AuthService {
   // Properties
 
-  private url: string = "https://bts530-project.herokuapp.com/api";
+  private url: string = "https://bts530-project.herokuapp.com";
 
   // Initialization
 
@@ -35,12 +35,13 @@ export class AuthService {
     }
   }
 
-  // login(credentials: Credentials): Observable<any> {
-  //   // Uncomment if you want to see the passed-in credentials
-  //   // console.log(credentials);
+  
+  login(credentials: Credentials): Observable<any> {
+    // Uncomment if you want to see the passed-in credentials
+    console.log(credentials);
 
-  //   // Attempt to login
-  //   // ##### EDIT the following to match the path to your web API login resource
-  //   return this.http.post<any>(`${this.url}/useraccounts/login`, credentials);
-  // }
+    // Attempt to login
+    // ##### EDIT the following to match the path to your web API login resource
+    return this.http.post<any>(`${this.url}/api/users/login`, credentials);
+  }
 }
