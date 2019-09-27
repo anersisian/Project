@@ -1,24 +1,20 @@
-// User Account Class
+// Subscription Class
 
-export class UserAccount {
-  userName: { type: string; unique: true };
-  fullName?: string;
-  password: string;
-  passwordConfirm: string;
-  statusActivated: boolean;
-  statusLocked?: boolean;
-  role: string;
-  claims?: [string];
+export class Subscriptions {
+  subName: string;
+  subPeriod: number;
+  subBoxType: string;
+  subPrice: number;
+  isActive: Boolean
 }
 
-// Student Class
+// User Class
 export class User {
-  _id: string;
-  username: string;
-  firstName: string;
-  secondName: string;
-  birthDate: Date;
-  email: string;
-  address: string;
+  userName: {type: string; unique: true; required: true};
+  fullName: string;
   password: string;
+  statusActivated: boolean;;
+  statusLocked: boolean;
+  isAdmin: boolean;
+  subscriptionInfo?: [string]
 }

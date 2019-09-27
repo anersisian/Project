@@ -3,14 +3,14 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Observable, of } from "rxjs";
 import { catchError, tap } from "rxjs/operators";
 import { User } from "./data-model-classes";
-
+import {Subscriptions} from "./data-model-classes";
 @Injectable({
   providedIn: "root"
 })
 export class DataModelManagerService {
   constructor(private http: HttpClient) {}
 
-  private url: string = "https://bts530-project.herokuapp.com/api";
+  private url: string = "https://bts530-project.herokuapp.com";
 
   private httpOptions = {
     headers: new HttpHeaders({
@@ -24,22 +24,23 @@ export class DataModelManagerService {
       return of(result as T);
     };
   }
-
+  subscriptions: Subscriptions;
   user: User;
   logged: Boolean = false;
 
-  // Get All
-  studentGetAll(): Observable<User[]> {
-    return this.http.get<User[]>(this.url);
+  //Users Get All
+  usersGetAll(): Observable<User[]> {
+    return this.http.get<User[]>(`${this.url}/api/users`);
+  }
+  
+  //Users Get One
+  usersGetByUsername(userName: string): Observable<User> {
+    return this.http.get<User>(`${this.url}/api/users/${userName}`);
   }
 
-  // Get One
-  studentGetById(id: number): Observable<User> {
-    return this.http.get<User>(`${this.url}/users/${id}`);
+  //Sub Get One
+  subGetById(subName: string): Observable<Subscriptions> {
+    return this.http.get<Subscriptions>(`${this.url}/api/subscriptions/${subName}/find`);
   }
 
-  // Get One
-  studentGetByUsername(username: string): Observable<User> {
-    return this.http.get<User>(`${this.url}/users/username/${username}`);
-  }
 } //

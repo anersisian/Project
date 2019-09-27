@@ -9,23 +9,25 @@
       </div>
 
       <!-- Login Form -->
-      <form>
-        <input
-          type="text"
-          id="login"
-          class="fadeIn second"
-          name="login"
-          placeholder="login"
-        />
-        <input
-          type="text"
-          id="password"
-          class="fadeIn third"
-          name="login"
-          placeholder="password"
-        />
-        <input type="submit" class="fadeIn fourth" value="Log In" />
-        <input type="cancel" id="cancel" class="fadeIn fourth" value="Cancel" />
+      <form (ngSubmit)='onSubmit()' #form='ngForm'>
+       <div class="form-group" >
+          <input type="text" class="form-control fadeIn second" id="userName" name="userName" [(ngModel)]="credentials.userName"
+            minlength="7" maxlength="30" #userName="ngModel" placeholder="Enter Email" required autofocus>
+             <span class="help-block" class="text-danger" *ngIf='userName.errors?.required && userName.touched'> 
+               ***Please Enter Your Email</span>
+             <span class="help-block" class="text-danger" *ngIf='userName.errors && userName.errors.email'>
+               ***Incorrect Email</span>
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control fadeIn third" id="password" name="password" [(ngModel)]="credentials.password"
+           minlength="6" #password="ngModel" placeholder="Enter Password" required autofocus>
+           <span class="help-block" class="text-danger" *ngIf='password.errors?.required && password.touched'>
+             ***Please Enter Your Password</span>
+        </div>
+        <input type="submit" class="fadeIn fourth" value="Log In" [disabled]="!form.form.valid"/>
+        <span *ngIf='loginError.length>0' class="text-danger">{{ loginError }}</span>
+        <a class="btn btn-default" routerLink='/home'>Back to home</a>
+        <!-- <a <a class="btn btn-default" routerLink='/home'>Back to home</a> -->
       </form>
 
       <!-- Remind Passowrd -->
