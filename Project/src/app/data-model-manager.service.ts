@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
-import { Observable, of } from "rxjs";
+import { Observable, of, Subscription } from "rxjs";
 import { catchError, tap } from "rxjs/operators";
 import { User } from "./data-model-classes";
 import {Subscriptions} from "./data-model-classes";
@@ -41,6 +41,10 @@ export class DataModelManagerService {
   //Sub Get One
   subGetById(subName: string): Observable<Subscriptions> {
     return this.http.get<Subscriptions>(`${this.url}/api/subscriptions/${subName}/find`);
+  }
+
+  subscriptionsGetAll(): Observable<Subscriptions[]> {
+    return this.http.get<Subscriptions[]>(`${this.url}/api/subscriptions`);
   }
 
 } //

@@ -20,6 +20,7 @@ import { RegisterComponent } from "./register/register.component";
 import { LogoutComponent } from './logout/logout.component';
 import { InterceptTokenService } from './intercept-token.service';
 import { JwtModule } from '@auth0/angular-jwt';
+import { SubscriptionsComponent } from './subscriptions/subscriptions.component';
 
 export function tokenGetter() {
   return localStorage.getItem('access_token');
@@ -36,6 +37,7 @@ const appRoutes: Routes = [{ path: "login", component: LoginComponent }];
     NotFoundPageComponent,
     RegisterComponent,
     LogoutComponent,
+    SubscriptionsComponent,
   ],
   imports: [
     BrowserModule,
