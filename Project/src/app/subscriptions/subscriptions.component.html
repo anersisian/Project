@@ -1,0 +1,26 @@
+<div class="main">
+ &nbsp;
+ <div class="header text-center" style="margin: 1rem 10rem;">
+   <h1 class="text-center" style="color:ghostwhite;">Subscriptions</h1>
+   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus consequuntur tempora, ratione iusto libero rem, voluptate magnam reprehenderit vero repellendus placeat ab. Quos debitis natus amet odio earum tempore facilis?</p>
+  </div>
+   <!--  cards  -->
+   
+   <div class="row justify-content-md-center">
+      <div *ngFor="let s of subscriptions">
+        <div *ngIf="s.isActive" class="card text-center col-4">
+            <!-- <img src="..." class="card-img-top" alt="..."> -->
+            <h5 class="card-header">{{s.subName}}</h5>
+            <div class="card-body">
+              <p class="card-text">{{ s.subPeriod}}</p>
+              <p class="card-text">{{ s.subBoxType}}</p>
+              <p class="card-text">${{ s.subPrice}}/mo</p>
+              <p class="card-text">{{ s.isActive}}</p>
+              <a href="#" class="btn btn-primary">Subscribe</a>
+            </div>
+          </div>
+          </div>
+        </div>
+        
+
+</div>
