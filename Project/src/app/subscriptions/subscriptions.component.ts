@@ -38,7 +38,7 @@ export class SubscriptionsComponent implements OnInit {
     handler.open({
       name: 'C-KIOSK',
       description: 'Checkout',
-      amount: amount * 100
+     amount: amount * 100
     });
  
   }

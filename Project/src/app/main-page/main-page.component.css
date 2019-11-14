@@ -13,9 +13,9 @@
   height: 100%;
   background-color: #45a07d;
 
-  /* background-position: center; */
-  /* background-repeat: no-repeat; */
-  /* background-size: cover; */
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
 }
 
 .navbar {
