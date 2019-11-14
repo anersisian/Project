@@ -44,7 +44,7 @@ export class LoginComponent implements OnInit {
     // Complete this method...
 
     // Clear the existing token
-    //localStorage.removeItem("access_token");
+    localStorage.removeItem("access_token");
 
     this.a.login(this.credentials).subscribe(data => {
       // If successful...
@@ -52,10 +52,10 @@ export class LoginComponent implements OnInit {
       localStorage.setItem('access_token', data.token);
       let tokenDecoded = this.jwtHelper.decodeToken(data.token);
       // Navigate to a landing/info view (home page?)
-      // this.router.navigate(['students/detail/', tokenDecoded.userName]);
      // this.router.navigate(['/users/account', tokenDecoded.userName]);
         //changed for now ----- TODO: make it a unique user profile management page
-        this.router.navigate(['/home']);
+        this.router.navigate(['/profile/:userName', tokenDecoded.userName]);
+        // console.log(data.token);
     },
       // If not successful...
       // console.log the error

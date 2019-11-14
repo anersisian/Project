@@ -1,3 +1,10 @@
-<p>
-  profile works!
-</p>
+<div class="container-fluid profile">
+  <div class="wrapper text-center" *ngIf="user">
+    <div class="row">
+      <h1>Hello {{user.fullName}} !</h1>
+    </div>
+    <div class="row">
+      <h2>Here you can track your subscription, delivery date and more! </h2>
+    </div>
+  </div>
+</div>
