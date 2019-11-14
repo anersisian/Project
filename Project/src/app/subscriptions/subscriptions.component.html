@@ -1,7 +1,7 @@
-<div class="main">
+<div class="subscriptions">
  &nbsp;
  <div class="header text-center" style="margin: 1rem 10rem;">
-   <h1 class="text-center" style="color:ghostwhite;">Subscriptions</h1>
+   <h1 class="text-center" style="color:ghostwhite;">Featured Subscriptions</h1>
    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus consequuntur tempora, ratione iusto libero rem, voluptate magnam reprehenderit vero repellendus placeat ab. Quos debitis natus amet odio earum tempore facilis?</p>
   </div>
    <!--  cards  -->
@@ -16,11 +16,13 @@
               <p class="card-text">{{ s.subBoxType}}</p>
               <p class="card-text">${{ s.subPrice}}/mo</p>
               <p class="card-text">{{ s.isActive}}</p>
-              <a href="#" class="btn btn-primary">Subscribe</a>
+              <a [routerLink]="['/cart', {id:s.subName}]" class="btn btn-primary">Subscribe</a>
             </div>
           </div>
-          </div>
+      </div>
+        <div class="md-col-12">
+          <a routerLink="/subscriptions" class="btn btn-primary">More Options</a>
         </div>
-        
+    </div>
 
 </div>

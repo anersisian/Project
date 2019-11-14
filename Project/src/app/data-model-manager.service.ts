@@ -47,4 +47,5 @@ export class DataModelManagerService {
     return this.http.get<Subscriptions[]>(`${this.url}/api/subscriptions`);
   }
 
+  
 } //

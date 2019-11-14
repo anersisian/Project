@@ -1,0 +1,30 @@
+<div class="container-fluid cart">
+  
+    <div class="header text-center">
+      <h1 class="h1" style="color:black;">Cart</h1>
+    </div>
+
+    <div class="row">
+      <div class="col text-center">
+        <p>this is your shopping cart</p>
+      </div>
+    </div>
+
+ <div class="row justify-content-md-center">
+   <div *ngFor="let s of subscriptions">
+     <div *ngIf="s.subName" class="card text-center col-4">
+       <!-- <img src="..." class="card-img-top" alt="..."> -->
+       <h5 class="card-header">{{s.subName}}</h5>
+       <div class="card-body">
+         <p class="card-text">{{ s.subPeriod}}</p>
+         <p class="card-text">{{ s.subBoxType}}</p>
+         <p class="card-text">${{ s.subPrice}}/mo</p>
+         <p class="card-text">{{ s.isActive}}</p>
+         <!-- <a [routerLink]="['/cart', {id:s.subName}]" class="btn btn-primary">Subscribe</a> -->
+       </div>
+     </div>
+   </div>
+ </div>
+
+</div>
+

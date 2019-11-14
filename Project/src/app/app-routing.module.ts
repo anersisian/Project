@@ -6,12 +6,14 @@ import { LoginComponent } from "./login/login.component";
 import { NotFoundPageComponent } from "./not-found-page/not-found-page.component";
 import { RegisterComponent } from "./register/register.component";
 import { SubscriptionsComponent } from "./subscriptions/subscriptions.component";
+import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
   { path: "home", component: MainPageComponent },
   { path: "register", component: RegisterComponent },
   { path: "login", component: LoginComponent },
   { path: "subscriptions", component: SubscriptionsComponent},
+  { path: "cart", component: CartComponent},
   { path: "", redirectTo: "/home", pathMatch: "full" },
   { path: "**", component: NotFoundPageComponent }
 ];
