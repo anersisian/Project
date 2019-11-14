@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataModelManagerService } from ".././data-model-manager.service";
+import { DataModelManagerService } from "../data-model-manager.service";
 import { Subscriptions } from ".././data-model-classes";
 import { Subscription } from 'rxjs';
 
@@ -38,7 +38,7 @@ export class SubscriptionsComponent implements OnInit {
     handler.open({
       name: 'C-KIOSK',
       description: 'Checkout',
-      amount: amount * 100
+     amount: amount * 100
     });
  
   }

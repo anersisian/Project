@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { DataModelManagerService } from ".././data-model-manager.service";
+import { DataModelManagerService } from "../data-model-manager.service";
 import { Router } from "@angular/router";
 
 @Component({
