@@ -24,7 +24,7 @@
            <span class="help-block" class="text-danger" *ngIf='password.errors?.required && password.touched'>
              ***Please Enter Your Password</span>
         </div>
-        <input routerLink="/profile/{{credentials.userName}}" type="submit" class="fadeIn fourth" value="Log In" [disabled]="!form.form.valid"/>
+        <input  type="submit" class="fadeIn fourth" value="Log In" [disabled]="!form.form.valid"/>
         <span *ngIf='loginError.length>0' class="text-danger">{{ loginError }}</span>
         <a class="btn btn-default" routerLink='/home'>Back to home</a>
         <!-- <a <a class="btn btn-default" routerLink='/home'>Back to home</a> -->

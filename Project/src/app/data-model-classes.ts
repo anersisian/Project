@@ -1,3 +1,5 @@
+import { Subscription } from 'rxjs';
+
 // Subscription Class
 
 export class Subscriptions {
@@ -16,5 +18,5 @@ export class User {
   statusActivated: boolean;;
   statusLocked: boolean;
   isAdmin: boolean;
-  subscriptionInfo?: [string]
+  subscriptionInfo?: Subscriptions[];
 }
