@@ -15,8 +15,8 @@ export class User {
   userName: {type: string; unique: true; required: true};
   fullName: string;
   password: string;
-  statusActivated: boolean;;
+  statusActivated: boolean;
   statusLocked: boolean;
   isAdmin: boolean;
-  subscriptionInfo?: Subscriptions[];
+  subscriptionInfo: Subscriptions[];
 }

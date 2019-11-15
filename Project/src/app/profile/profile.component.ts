@@ -20,12 +20,12 @@ export class ProfileComponent implements OnInit {
 
     this.m.usersGetByUsername(userName).subscribe(u =>{
       this.user = u;
-      // if(this.user.subscriptionInfo)
-      // {
-      //   this.user.subscriptionInfo = [];
-      // }
+       if(!this.user.subscriptionInfo)
+       {
+         this.user.subscriptionInfo = [];
+       }
+       console.log(this.user.subscriptionInfo);
       this.m.user = this.user;
-      
     });
   }
 
