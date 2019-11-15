@@ -111,7 +111,7 @@
         </div>
 
         <a class="btn btn-default" routerLink="/home">Back to home</a>&nbsp;
-        <a routerLink="/profile/{{credentials.userName}}"><button class="btn btn-primary" type="submit"
+        <a><button class="btn btn-primary" type="submit"
           [disabled]="!form.form.valid">Register</button></a>&nbsp;&nbsp;
         <span *ngIf="registerError.length > 0" class="text-danger">{{registerError}}</span>
       </form>

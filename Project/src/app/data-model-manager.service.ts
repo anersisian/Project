@@ -24,6 +24,7 @@ export class DataModelManagerService {
       return of(result as T);
     };
   }
+  
   subscriptions: Subscriptions;
   user: User;
   logged: Boolean = false;

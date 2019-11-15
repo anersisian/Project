@@ -29,7 +29,7 @@ export class RegisterComponent implements OnInit {
     this.create(this.credentials).subscribe(
       res => {
         this.register = true;
-        this.router.navigate(["/profile/:userName"]); 
+        this.router.navigate(["/profile/", this.credentials.userName]); 
       },
       err => {
         //handle errors
