@@ -54,8 +54,8 @@ export class LoginComponent implements OnInit {
       // Navigate to a landing/info view (home page?)
      // this.router.navigate(['/users/account', tokenDecoded.userName]);
         //changed for now ----- TODO: make it a unique user profile management page
-        this.router.navigate(['/profile/:userName', tokenDecoded.userName]);
-        // console.log(data.token);
+        this.router.navigate(['/profile/', tokenDecoded.userName]);
+         console.log(data.token);
     },
       // If not successful...
       // console.log the error
