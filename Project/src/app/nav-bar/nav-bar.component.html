@@ -1,7 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top">
   <a class="navbar-brand" routerLink="" routerLinkActive="">C</a>
   <a class="nav-link" routerLink="/subscriptions">Subscriptions</a>
-  <a class="nav-link" routerLink="/profile/:userName">Profile</a>
+  <!-- TODO: profile has to pickup userName if user is already logged in else redirect to login page -->
+  <!-- <a class="nav-link" routerLink="/profile/{{u.userName}}">Profile</a> -->
   <ul class="navbar-nav ml-auto">
     <li><i class="material-icons">shopping_cart</i></li>
     <li><a routerLink="/cart" routerLinkActive="active"> Cart</a></li>

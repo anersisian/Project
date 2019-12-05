@@ -8,7 +8,14 @@
     </div>
     <div class="row" *ngFor="let s of [user.subscriptionInfo]">
       <h1> Numner of subscriptions: {{s.length}}</h1>
-      <h2>{{s}}</h2>
+    </div>
+    <div class="row">
+       <h2>Subscription Name: {{s.subName}}</h2>
+    </div>
+    <div class="row">
+      <!-- Logout -->
+      <a routerLink="/logout" class="btn btn-danger">Logout</a>
+      <a routerLink="/home" class="btn btn-primary"> Back to home</a>
     </div>
   </div>
 </div>
