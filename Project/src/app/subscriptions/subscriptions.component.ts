@@ -66,6 +66,8 @@ export class SubscriptionsComponent implements OnInit {
             // Get the token ID to your server-side code for use.
             console.log(token)
             alert('Payment Success!!');
+            // TODO: push the subscrippiton into user subscription array
+            // this.m.subscriptionConfirm(this.user._id, this.user.subscriptionInfo).subscribe(u => this.message = u.message);
           }
         });
       }
