@@ -39,14 +39,29 @@ export class DataModelManagerService {
     return this.http.get<User>(`${this.url}/api/users/${userName}`);
   }
 
+  //Users Update
+  usersUpdate(userName: string): Observable<User> {
+    return this.http.get<User>(`${this.url}/api/users/${userName}/update`);
+  }
+
   //Sub Get One
   subGetById(subName: string): Observable<Subscriptions> {
     return this.http.get<Subscriptions>(`${this.url}/api/subscriptions/${subName}/find`);
   }
 
+  //Sub Get All
   subscriptionsGetAll(): Observable<Subscriptions[]> {
     return this.http.get<Subscriptions[]>(`${this.url}/api/subscriptions`);
   }
+
+  //Sub Confirm Subscription
+  // subscriptionConfirm(id: string, item: Subscriptions[]): Observable<any> {
+  //   return this.http.put<any>(`${this.url}/api/subscriptions/${id}/confirmed`, item, this.httpOptions)
+  //     .pipe(
+  //       tap((newItem: Subscriptions) => console.log({ "message": "Subscription Confirmed" })),
+  //       catchError(this.handleError<any>('confirm'))
+  //     );
+  // }
 
   
 } //

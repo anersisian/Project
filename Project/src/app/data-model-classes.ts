@@ -12,11 +12,12 @@ export class Subscriptions {
 
 // User Class
 export class User {
+  _id: string;
   userName: {type: string; unique: true; required: true};
   fullName: string;
   password: string;
   statusActivated: boolean;
   statusLocked: boolean;
   isAdmin: boolean;
-  subscriptionInfo: Subscriptions[];
+  subscriptionInfo?: Subscriptions[];
 }

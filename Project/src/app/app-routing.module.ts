@@ -7,6 +7,7 @@ import { NotFoundPageComponent } from "./not-found-page/not-found-page.component
 import { RegisterComponent } from "./register/register.component";
 import { SubscriptionsComponent } from "./subscriptions/subscriptions.component";
 import { ProfileComponent } from './profile/profile.component';
+import { LogoutComponent } from './logout/logout.component';
 
 const routes: Routes = [
   { path: "home", component: MainPageComponent },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: "login", component: LoginComponent },
   { path: "subscriptions", component: SubscriptionsComponent},
   { path: "profile/:userName", component: ProfileComponent},
+  { path: "logout", component: LogoutComponent},
   { path: "", redirectTo: "/home", pathMatch: "full" },
   { path: "**", component: NotFoundPageComponent }
 ];

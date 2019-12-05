@@ -9,7 +9,7 @@ import { Router } from "@angular/router";
 export class LogoutComponent implements OnInit {
   constructor(private m: DataModelManagerService, private router: Router) {}
 
-  ngOnInit() {
+  ngOnInit() {  
     this.m.logged = false;
     localStorage.removeItem("access_token");
     this.router.navigate(["/home"]);
