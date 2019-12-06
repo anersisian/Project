@@ -1,4 +1,4 @@
-.navbar {
+/* .navbar {
   background-color: #0000008c;
   color: #f0f3f8;
   padding: 2px 0px 2px 0px;
@@ -32,4 +32,166 @@ a {
 a:hover {
   text-decoration: none;
   color: #85cdca;
+} */
+/* 
+header {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  align-items: center;
+  padding: 10px 0;
+
+}
+
+.logo-container,
+.nav-links {
+  display: flex;
+
+  margin-top: 30px;
+}
+
+
+
+.logo {
+  margin-left: 20px;
+  font-weight: 400;
+  font-size: 30px;
+  color: #85cdca;
+  text-transform: uppercase;
+}
+
+
+
+nav {
+  flex: 1;
+}
+
+.nav-links {
+  justify-content: end;
+  list-style: none;
+
+
+}
+
+.nav-link {
+  color: #85cdca;
+  font-size: 20px;
+  text-decoration: none;
+} */
+
+header {
+  display: flex;
+  justify-items: center;
+  width: 80%;
+
+  margin: auto;
+  align-items: center;
+  padding-top: 10px;
+}
+
+
+
+.logo-container {
+  flex: 7;
+}
+
+nav {
+  flex: 1;
+
+}
+
+.logo-container,
+.nav-links {
+  display: flex;
+
+
+}
+
+.nav-links {
+
+
+  list-style: none;
+  font-size: 20px;
+}
+
+.logo a {
+  color: #85cdca;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+nav ul li a {
+  color: #85cdca;
+  text-transform: uppercase;
+
+
+}
+
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+
+nav ul li a:hover {
+  color: #555;
+}
+
+
+/* stroke */
+nav.stroke ul li a,
+nav.fill ul li a {
+  position: relative;
+}
+
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+}
+
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+
+nav.fill ul li a {
+  transition: all 2s;
+}
+
+nav.fill ul li a:after {
+  text-align: left;
+  content: '.';
+  margin: 0;
+  opacity: 0;
+}
+
+nav.fill ul li a:hover {
+  color: #fff;
+  z-index: 1;
+}
+
+nav.fill ul li a:hover:after {
+  z-index: -10;
+  animation: fill 1s forwards;
+  -webkit-animation: fill 1s forwards;
+  -moz-animation: fill 1s forwards;
+  opacity: 1;
+}
+
+hr.new1 {
+  border-top: 0.99px solid white;
+  opacity: 0.2;
+  margin: 0;
+  padding: 0;
 }

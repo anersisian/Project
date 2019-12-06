@@ -56,6 +56,7 @@ export class LoginComponent implements OnInit {
         //changed for now ----- TODO: make it a unique user profile management page
         this.router.navigate(['/profile/', tokenDecoded.userName]);
         this.logged = true;
+        localStorage.setItem("logged", JSON.stringify(this.logged));
          console.log(data.token);
     },
       // If not successful...
@@ -67,9 +68,7 @@ export class LoginComponent implements OnInit {
       }
     );
   }
-    ngOnDestroy() {
-      this.m.logged = this.logged;
-    }
+  
 }
 
 // User name and password

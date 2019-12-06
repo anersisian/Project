@@ -1,11 +1,9 @@
-<nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top">
+<!-- <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top">
   <a class="navbar-brand" routerLink="" routerLinkActive="">C</a>
   <a class="nav-link" routerLink="/subscriptions">Subscriptions</a>
-  <!-- TODO: profile has to pickup userName if user is already logged in else redirect to login page -->
-  <!-- <a class="nav-link" routerLink="/profile/:userName">Profile</a> -->
+
   <ul class="navbar-nav ml-auto">
-    <!-- <li><i class="material-icons">shopping_cart</i></li>
-    <li><a routerLink="/cart" routerLinkActive="active"> Cart</a></li> -->
+
     <li></li>
     <li></li>
     <li></li>
@@ -22,15 +20,27 @@
     <li><a routerLink="/login" routerLinkActive="active"> Log-In</a></li>
   </ul>
 
-  <!-- <button
-    class="navbar-toggler"
-    type="button"
-    data-toggle="collapse"
-    data-target="#navbarSupportedContent"
-    aria-controls="navbarSupportedContent"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
-  >
-    <span class="navbar-toggler-icon"></span>
-  </button> -->
-</nav>
+
+</nav> -->
+
+
+
+<header>
+  <div class="logo-container">
+    <img src="../../assets/images/favicon.png" alt="logo" />
+    <h4 class="logo"><a routerLink="/home" routerLinkActive="active">C-Kiosk</a> </h4>
+  </div>
+  <nav class="stroke">
+    <ul class="nav-links">
+      <li *ngIf="isLogged"><a class="nav-link" routerLink="/profile/{{userProfile}}"
+          routerLinkActive="active">Profile</a></li>
+      <li *ngIf="!isLogged"><a class="nav-link" routerLink="/login" routerLinkActive="active">LogIn</a></li>
+      <li *ngIf="isLogged"><a class="nav-link" routerLink="/logout" routerLinkActive="active">LogOut</a></li>
+      <li><a class="nav-link" routerLink="/register" routerLinkActive="active">Register</a></li>
+
+    </ul>
+
+  </nav>
+
+</header>
+<hr class="new1">

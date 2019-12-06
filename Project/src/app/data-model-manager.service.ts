@@ -27,7 +27,7 @@ export class DataModelManagerService {
   
   subscriptions: Subscriptions;
   user: User;
-  logged: Boolean = false;
+  logged: Boolean;
 
   //Users Get All
   usersGetAll(): Observable<User[]> {

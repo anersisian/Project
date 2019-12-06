@@ -1,20 +1,29 @@
-.subscriptions{
-  height:100%;
-}
-
-.row{
-    margin: 5rem;
-}
-
-.card{
-    min-width: 17rem;
-    max-width: 17rem;
-    margin: 2rem;
-    padding: 0;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+.card {
+  min-width: 400px;
+  max-width: 400px;
+  margin: 4rem;
+  padding: 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  font-size: 25px;
 }
 
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
 }
 
+.subscriptions {
+  height: 100vh;
+  background-color: #17242A;
+}
+
+.header {
+  margin-top: 10%;
+  color: white;
+}
+
+.btn {
+  font-size: 20px;
+  background-color: #5dcfa4;
+  border-radius: 0;
+  border-color: #5dcfa4;
+}

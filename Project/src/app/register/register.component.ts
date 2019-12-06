@@ -31,7 +31,12 @@ export class RegisterComponent implements OnInit {
       res => {
         this.register = true;
         this.credentials.isAdmin = false;
-        this.router.navigate(["/profile/", this.credentials.userName]); 
+        
+
+        setTimeout(() => {
+          this.router.navigate(["/home"])
+      }, 2000);
+
       },
       err => {
         //handle errors
