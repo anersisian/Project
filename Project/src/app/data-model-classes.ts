@@ -7,7 +7,7 @@ export class Subscriptions {
   subPeriod: number;
   subBoxType: string;
   subPrice: number;
-  isActive: Boolean
+  isActive: boolean;
 }
 
 // User Class

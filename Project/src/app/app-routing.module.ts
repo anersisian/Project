@@ -8,6 +8,7 @@ import { RegisterComponent } from "./register/register.component";
 import { SubscriptionsComponent } from "./subscriptions/subscriptions.component";
 import { ProfileComponent } from './profile/profile.component';
 import { LogoutComponent } from './logout/logout.component';
+import { AdminComponent } from './admin/admin.component';
 
 const routes: Routes = [
   { path: "home", component: MainPageComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: "subscriptions", component: SubscriptionsComponent},
   { path: "profile/:userName", component: ProfileComponent},
   { path: "logout", component: LogoutComponent},
+  { path: "admin/:userName", component: AdminComponent},
   { path: "", redirectTo: "/home", pathMatch: "full" },
   { path: "**", component: NotFoundPageComponent }
 ];

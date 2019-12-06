@@ -10,12 +10,11 @@ import { User } from '../data-model-classes';
 })
 export class NavBarComponent implements OnInit {
 
-//  users: User[];
+  user: User;
 
   constructor(private m: DataModelManagerService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    // this.m.usersGetAll().subscribe(u => (this.users = u));
   }
 
 }

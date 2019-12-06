@@ -21,6 +21,7 @@ export class RegisterComponent implements OnInit {
     this.credentials.password = "";
     this.credentials.passwordConfirm = "";
     this.credentials.fullName = "";
+    this.credentials.isAdmin = false;
   }
 
   ngOnInit() {}
@@ -29,6 +30,7 @@ export class RegisterComponent implements OnInit {
     this.create(this.credentials).subscribe(
       res => {
         this.register = true;
+        this.credentials.isAdmin = false;
         this.router.navigate(["/profile/", this.credentials.userName]); 
       },
       err => {
@@ -58,4 +60,5 @@ export class Credentials {
   fullName: string;
   password: string;
   passwordConfirm: string;
+  isAdmin: boolean;
 }
