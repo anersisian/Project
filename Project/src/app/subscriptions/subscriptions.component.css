@@ -1,10 +1,14 @@
 .card {
-  min-width: 400px;
-  max-width: 400px;
-  margin: 4rem;
+  min-width: 250px;
+  max-width: 250px;
+  margin: 2rem;
   padding: 0;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
   font-size: 25px;
+}
+
+.grey {
+  color: #a0a0a0;
 }
 
 .card:hover {
@@ -13,11 +17,11 @@
 
 .subscriptions {
   height: 100vh;
-  background-color: #17242A;
+  background-color: #17242a;
 }
 
 .header {
-  margin-top: 10%;
+  margin-top: 5%;
   color: white;
 }
 
