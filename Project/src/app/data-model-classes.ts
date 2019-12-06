@@ -3,6 +3,7 @@ import { Subscription } from 'rxjs';
 // Subscription Class
 
 export class Subscriptions {
+  _id: string;
   subName: string;
   subPeriod: number;
   subBoxType: string;

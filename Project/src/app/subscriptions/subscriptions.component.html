@@ -19,7 +19,7 @@
               <p class="card-text">${{ s.subPrice}}/mo</p>
               <p class="card-text">{{ s.isActive}}</p>
               
-              <button (click)="pay(s.subPrice)" class="btn btn-info btn-block">Subscribe</button>
+              <button (click)="pay(s.subPrice, s._id)" class="btn btn-info btn-block">Subscribe</button>
 
             </div>
           </div>
