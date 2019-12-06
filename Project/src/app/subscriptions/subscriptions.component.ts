@@ -15,6 +15,7 @@ export class SubscriptionsComponent implements OnInit {
   subscription: Subscriptions;
   users: User[];
   user: User;
+  logged: Boolean;
   
   constructor(private m: DataModelManagerService, private router: Router) { }
   handler:any = null;
@@ -39,7 +40,10 @@ console.log(amount + " " + _id);
           //alert('Token Created!!');
         }
   });
- if(this.m.logged === true) //checks if the user is logged in
+
+  this.logged  = JSON.parse(localStorage.getItem("logged"));
+
+ if(this.logged === true) //checks if the user is logged in
  {
    handler.open({
      name: 'C-KIOSK',
