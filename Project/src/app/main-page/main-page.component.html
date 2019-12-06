@@ -1,12 +1,31 @@
-<div id="first">
+<!-- <div id="first">
   <app-nav-bar></app-nav-bar>
-  <div class="arrow">
-    <span></span>
-    <span></span>
-    <span></span>
+  <div class="arrow bounce">
+    <a class="fa fa-arrow-down fa-2x" href="#"></a>
   </div>
 </div>
 
 <div id="second">
   <app-subscriptions></app-subscriptions>
-</div>
+</div> -->
+
+<main class="main">
+  <section class="firstSection">
+    <div class="navB">
+      <app-nav-bar></app-nav-bar>
+    </div>
+
+    <div class="introduction">
+      <div class="intro-text">
+        <h1>Future is now</h1>
+      </div>
+    </div>
+  </section>
+
+  <a class="bounce animated arrow" [ngx-scroll-to]="'#destination'"></a>
+
+  <section id="section2">
+    <div id="destination" #destinationRef></div>
+    <app-subscriptions></app-subscriptions>
+  </section>
+</main>

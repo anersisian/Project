@@ -260,7 +260,7 @@ input[type="password"]:placeholder {
 #secondPage {
   height: 100%;
 
-  background-color: #45a07d;
+  background-color: #17242A;
 
   background-position: center;
   background-repeat: no-repeat;
@@ -273,4 +273,14 @@ a {
 
 #id {
   margin-top: 5%;
+}
+
+.back {
+  border: 1px solid #5dcfa4;
+  background-color: white;
+  color: #5dcfa4;
+  padding: 12px 27px;
+  font-size: 16px;
+  cursor: pointer;
+
 }

@@ -1,121 +1,76 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-3"></div>
-    <div class="col-md-6 col-sm-12" id="Account-form">
-      <h4 class="text-center"><b>Create Account</b></h4>
-      <hr />
+<div id="secondPage">
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
 
-      <form (ngSubmit)="onSubmit()" #form="ngForm">
+      <!-- Icon -->
+      <div id="id" class="fadeIn first">
+        <i class="material-icons">perm_identity </i>
+      </div>
+      <h4 class="text-center fadeIn first"><b>Create Account</b></h4>
+
+      <!-- Login Form -->
+      <form (ngSubmit)='onSubmit()' #form='ngForm'>
         <div class="form-group">
-          <label class="control-label" for="userName">User name:</label>
-          <input
-            class="form-control"
-            type="email"
-            required
-            email
-            id="userName"
-            name="userName"
-            [(ngModel)]="credentials.userName"
-            minlength="7"
-            maxlength="50"
-            #userName="ngModel"
-            placeholder="Enter Email"
-            required
-            autofocus
-          />
-          <span
-            class="help-block"
-            class="text-danger"
-            *ngIf="userName.errors?.required && userName.touched"
-          >
-            *** Please Email Name to proceed</span
-          >
-          <span
-            class="help-block"
-            class="text-danger"
-            *ngIf="userName.errors && userName.errors.email"
-          >
-            *** Incorrect Email</span
-          >
+
+          <label class="control-label fadeIn second" for="userName">User name:</label>
+          <input input type="text" class="form-control fadeIn second" required email id="userName" name="userName"
+            [(ngModel)]="credentials.userName" minlength="7" maxlength="50" #userName="ngModel"
+            placeholder="Enter Email" required autofocus />
+
+
         </div>
+        <span class="help-block" class="text-danger" *ngIf="userName.errors?.required && userName.touched">
+
+          Email field is required <br> <br></span>
+        <span class="help-block" class="text-danger" *ngIf="userName.errors && userName.errors.email">
+
+          Incorrect Email <br> <br></span>
 
         <div class="form-group">
-          <label class="control-label" for="fullName">Full name:</label>
-          <input
-            class="form-control"
-            id="fullName"
-            name="fullName"
-            [(ngModel)]="credentials.fullName"
-            required
-            minlength="5"
-            maxlength="55"
-            #fullName="ngModel"
-            autofocus
-            placeholder="Enter Full Name"
-          />
-          <span
-            class="help-block"
-            class="text-danger"
-            *ngIf="fullName.errors?.required && fullName.touched"
-          >
-            *** Full name is required</span
-          >
-        </div>
+          <label class="control-label fadeIn third" for="fullName">Full name:</label>
+          <input input type="text" class="form-control fadeIn third" id="fullName" name="fullName"
+            [(ngModel)]="credentials.fullName" required minlength="5" maxlength="55" #fullName="ngModel" autofocus
+            placeholder="Enter Full Name" />
 
+        </div>
+        <span class="help-block" class="text-danger" *ngIf="fullName.errors?.required && fullName.touched">
+          Name field is required <br> <br></span>
         <div class="form-group">
-          <label class="control-label" for="password">Password:</label>
-          <input
-            type="password"
-            class="form-control"
-            id="password"
-            name="password"
-            [(ngModel)]="credentials.password"
-            minlength="6"
-            maxlength="30"
-            #password="ngModel"
-            placeholder="Enter Password"
-            required
-          />
-          <span
-            class="help-block"
-            class="text-danger"
-            *ngIf="password.errors?.required && password.touched"
-          >
-            *** Please enter a password</span
-          >
-        </div>
+          <label class="control-label fadeIn fourth" for="password">Password:</label>
+          <input type="password" class="form-control fadeIn fourth" id="password" name="password"
+            [(ngModel)]="credentials.password" minlength="6" maxlength="30" #password="ngModel"
+            placeholder="Enter Password" required />
 
+        </div>
+        <span class="help-block" class="text-danger" *ngIf="password.errors?.required && password.touched">
+          Please enter a password <br> <br></span>
         <div class="form-group">
-          <label class="control-label" for="passwordConfirm">
-            Confirm Password:</label
-          >
-          <input
-            type="password"
-            class="form-control"
-            id="passwordConfirm"
-            name="passwordConfirm"
-            [(ngModel)]="credentials.passwordConfirm"
-            minlength="6"
-            maxlength="30"
-            #passwordConfirm="ngModel"
-            placeholder="Repeat Password"
-            required
-          />
-          <span
-            class="help-block"
-            class="text-danger"
-            *ngIf="passwordConfirm.errors?.required && passwordConfirm.touched"
-          >
-            *** Please re-enter the password</span
-          >
-        </div>
+          <label class="control-label fadeIn fourth" for="passwordConfirm">
+            Confirm Password:</label>
+          <input type="password" class="form-control fadeIn fourth" id="passwordConfirm" name="passwordConfirm"
+            [(ngModel)]="credentials.passwordConfirm" minlength="6" maxlength="30" #passwordConfirm="ngModel"
+            placeholder="Repeat Password" required />
 
-        <a class="btn btn-default" routerLink="/home">Back to home</a>&nbsp;
-        <a><button class="btn btn-primary" type="submit"
-          [disabled]="!form.form.valid">Register</button></a>&nbsp;&nbsp;
+
+        </div>
+        <div> <span class="help-block" class="text-danger"
+            *ngIf="passwordConfirm.errors?.required && passwordConfirm.touched">
+            Please re-enter the password</span>
+          <br> <br></div>
+
+        <input type="submit" class="fadeIn fourth" value="Register" [disabled]="!form.form.valid"
+          (click)="onSubmit()" />
         <span *ngIf="registerError.length > 0" class="text-danger">{{registerError}}</span>
+        <a class="btn back btn-default fadeIn fourth" routerLink='/home'>Back to home</a>
+        <!-- <a <a class="btn btn-default" routerLink='/home'>Back to home</a> -->
+
+
+
       </form>
-      <div class="col-md-3"></div>
+
+      <!-- Remind Passowrd -->
+
     </div>
   </div>
 </div>

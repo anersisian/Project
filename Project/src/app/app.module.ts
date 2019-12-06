@@ -23,6 +23,7 @@ import { JwtModule } from '@auth0/angular-jwt';
 import { SubscriptionsComponent } from './subscriptions/subscriptions.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AdminComponent } from './admin/admin.component';
+import { ScrollToModule } from "@nicky-lenaers/ngx-scroll-to";
 
 export function tokenGetter() {
   return localStorage.getItem('access_token');
@@ -49,6 +50,7 @@ const appRoutes: Routes = [{ path: "login", component: LoginComponent }];
     HttpClientModule,
     AngularSvgIconModule,
     BrowserAnimationsModule,
+    ScrollToModule.forRoot(),
     FormsModule,
     RouterModule,
     RouterModule.forRoot(appRoutes),

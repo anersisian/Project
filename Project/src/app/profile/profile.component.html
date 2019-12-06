@@ -7,11 +7,11 @@
       <h2>Here you can track your subscription, delivery date and more! </h2>
     </div>
     <div class="row" *ngFor="let s of [user.subscriptionInfo]">
-      <h1> Numner of subscriptions: {{s.length}}</h1>
+      <h1> Number of subscriptions: {{s.length}}</h1>
     </div>
     <div class="text-left" *ngFor="let s of user.subscriptionInfo">
-       <h2>Subscription Name: {{s.subName}}</h2>
-       <h2>subBoxType: {{s.subBoxType}}</h2>
+      <h2>Subscription Name: {{s.subName}}</h2>
+      <h2>subBoxType: {{s.subBoxType}}</h2>
     </div>
     <div class="row">
       <!-- Logout -->
