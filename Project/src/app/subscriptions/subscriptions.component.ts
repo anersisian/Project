@@ -52,7 +52,7 @@ console.log(amount + " " + _id);
     });
     
   }else{
-   this.router.navigate(["/login"]);//if not logged in will redirect to login page
+   this.router.navigate(["/login"]);
   }//!if
   }
  
