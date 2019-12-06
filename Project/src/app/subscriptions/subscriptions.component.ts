@@ -43,7 +43,7 @@ console.log(amount + " " + _id);
 
   this.logged  = JSON.parse(localStorage.getItem("logged"));
 
- if(this.logged === true) //checks if the user is logged in
+ if(this.logged === true) 
  {
    handler.open({
      name: 'C-KIOSK',
