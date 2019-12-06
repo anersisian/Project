@@ -39,9 +39,12 @@ export class DataModelManagerService {
     return this.http.get<User>(`${this.url}/api/users/${userName}`);
   }
 
+  usersDelete(_id: string): Observable<any> {
+    return this.http.delete(`${this.url}/api/users/${_id}/delete`, { responseType: 'text' });
+  }
   //Users Update
-  usersUpdate(userName: string): Observable<User> {
-    return this.http.get<User>(`${this.url}/api/users/${userName}/update`);
+  usersUpdate(id: number, value: any): Observable<Object> {
+    return this.http.put(`${this.url}/api/users/${id}/update`, value);
   }
 
   //Sub Get One
@@ -54,6 +57,10 @@ export class DataModelManagerService {
     return this.http.get<Subscriptions[]>(`${this.url}/api/subscriptions`);
   }
 
+  //Sub delete
+  subscriptionDelete(_id: string): Observable<any>{
+  return this.http.delete(`${this.url}/api/subscriptions/${_id}`, {responseType: 'text'});
+  }
   //Sub Confirm Subscription
   // subscriptionConfirm(id: string, item: Subscriptions[]): Observable<any> {
   //   return this.http.put<any>(`${this.url}/api/subscriptions/${id}/confirmed`, item, this.httpOptions)

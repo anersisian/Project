@@ -21,12 +21,12 @@ export class SubscriptionsComponent implements OnInit {
 
   ngOnInit() {
     this.m.subscriptionsGetAll().subscribe(s => (this.subscriptions = s));
-    this.m.usersGetAll().subscribe(u => (this.users = u));
+   // this.m.usersGetAll().subscribe(u => (this.users = u));
     this.loadStripe();
   }
 
-  pay(amount) {
-
+  pay(amount, _id) {
+console.log(amount + " " + _id);
       var handler = (<any>window).StripeCheckout.configure({
         key: 'pk_test_CsnA1j2JoAbkCVNB1gGaPNxw00DxOzthfD',
         //locale: can specify location
@@ -34,6 +34,8 @@ export class SubscriptionsComponent implements OnInit {
           // You can access the token ID with `token.id`.
           // Get the token ID to your server-side code for use.
           console.log(token)
+          //TODO: update user with subscription passed
+          //this.m.usersUpdate(this.user._id, this.user.subscriptionInfo = this.subscriptionInfo).subscribe(u => u);
           //alert('Token Created!!');
         }
   });
@@ -67,7 +69,6 @@ export class SubscriptionsComponent implements OnInit {
             console.log(token)
             alert('Payment Success!!');
             // TODO: push the subscrippiton into user subscription array
-            // this.m.subscriptionConfirm(this.user._id, this.user.subscriptionInfo).subscribe(u => this.message = u.message);
           }
         });
       }

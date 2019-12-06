@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../data-model-classes';
+import { User, Subscriptions } from '../data-model-classes';
 import { DataModelManagerService } from '../data-model-manager.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from "@angular/common/http";
@@ -12,6 +12,7 @@ import { Observable } from 'rxjs';
 })
 export class AdminComponent implements OnInit {
 
+  subList: Subscriptions[];
   users: User[];
   user: User;
 
@@ -44,12 +45,27 @@ export class AdminComponent implements OnInit {
         {
           console.log(this.user.isAdmin);
           this.m.usersGetAll().subscribe(u => (this.users = u));
+          this.m.subscriptionsGetAll().subscribe(s => (this.subList = s));
           this.m.user = this.user;
         }else{
           this.router.navigate(["/home"]);
         }
       });
     }
+
+    deleteUser(_id)
+    {
+      console.log("trying to delete: -> " + _id);
+      this.m.usersDelete(_id).subscribe();
+      console.log("removed: " + _id);
+    }
+
+    deleteSubscription(_id){
+      console.log("trying to delete: -> " + _id);
+      this.m.subscriptionDelete(_id).subscribe();
+      console.log("removed: " + _id);
+    }
+    
 
     onSubmit(): void {
       this.create(this.subscription).subscribe(
