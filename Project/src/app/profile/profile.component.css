@@ -1,9 +1,26 @@
-.profile{
-    /* background-color: darkgrey; */
-    padding: 10rem;
-    height: 100vh;
+.profile {
+  /* background-color: darkgrey; */
+
+  height: 100vh;
+  background-color: #17242a;
+  color: white;
 }
 
-.wrapper{
-   
+.back {
+  position: absolute;
+  top: 80%;
+  left: 45%;
+  background-color: #5ed6a8;
+  border-radius: 0;
+  border-color: #5ed6a8;
+}
+
+.hello {
+  margin-left: 40%;
+  margin-top: 5%;
+}
+
+.here {
+  margin-top: 2%;
+  margin-left: 10%;
 }
