@@ -14,6 +14,8 @@ export class RegisterComponent implements OnInit {
   register: Boolean = false;
   registerError: string;
 
+  message: Boolean = false;
+
   constructor(private http: HttpClient, private router: Router) {
     this.registerError = ""; //error for register account
     this.credentials = new Credentials();
@@ -31,7 +33,7 @@ export class RegisterComponent implements OnInit {
       res => {
         this.register = true;
         this.credentials.isAdmin = false;
-        
+        this.message = true;
 
         setTimeout(() => {
           this.router.navigate(["/home"])
