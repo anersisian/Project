@@ -15,10 +15,20 @@ export class Subscriptions {
 export class User {
   _id: string;
   userName: {type: string; unique: true; required: true};
-  fullName: string;
+  firstName: string;
+  lastName: string;
   password: string;
+  phoneNumber: string;
   statusActivated: boolean;
   statusLocked: boolean;
   isAdmin: boolean;
+  streetName: string;
+  streetNumber: number;
+  unit: number;
+  province: string;
+  country: string;
+  postalCode: string;
   subscriptionInfo?: Subscriptions[];
 }
+
+

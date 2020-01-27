@@ -20,10 +20,21 @@ export class RegisterComponent implements OnInit {
     this.registerError = ""; //error for register account
     this.credentials = new Credentials();
     this.credentials.userName = "";
+    this.credentials.firstName = "";
+    this.credentials.lastName = "";
     this.credentials.password = "";
     this.credentials.passwordConfirm = "";
-    this.credentials.fullName = "";
+    this.credentials.phoneNumber = "";
+    this.credentials.streetName ="";
+    this.credentials.streetNumber =0;
+    this.credentials.unit=0;
+    this.credentials.province="";
+    this.credentials.country="";
+    this.credentials.postalCode="";
+
+  
     this.credentials.isAdmin = false;
+
   }
 
   ngOnInit() {}
@@ -41,7 +52,7 @@ export class RegisterComponent implements OnInit {
 
       },
       err => {
-        //handle errors
+        //handle errorsc
         // console.log(err)
         if (this.register == false) {
           if (this.credentials.passwordConfirm != this.credentials.password) {
@@ -64,8 +75,18 @@ export class RegisterComponent implements OnInit {
 
 export class Credentials {
   userName: string;
-  fullName: string;
-  password: string;
-  passwordConfirm: string;
-  isAdmin: boolean;
+   firstName : string;
+  lastName : string;
+   password : string;
+   passwordConfirm : string;
+    phoneNumber: string;
+   streetName :string;
+    streetNumber: number;
+    unit:number;
+    province:string;
+   country:string;
+    postalCode:string;
+    isAdmin:boolean;
+
+
 }

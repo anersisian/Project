@@ -14,53 +14,155 @@
         <div class="form-group">
 
           <label class="control-label fadeIn second" for="userName">User name:</label>
-          <input input type="text" class="form-control fadeIn second" required email id="userName" name="userName"
+          <input input type="text" class="form-control fadeIn second" 
+          required id="userName" name="userName"
             [(ngModel)]="credentials.userName" minlength="7" maxlength="50" #userName="ngModel"
-            placeholder="Enter Email" required autofocus />
+            placeholder="Enter Email" autofocus />
 
 
         </div>
-        <span class="help-block" class="text-danger" *ngIf="userName.errors?.required && userName.touched">
+  
 
-          Email field is required <br> <br></span>
-        <span class="help-block" class="text-danger" *ngIf="userName.errors && userName.errors.email">
+       <!--<span class="help-block" class="text-danger" *ngIf="userName.errors && userName.errors.email">
 
-          Incorrect Email <br> <br></span>
-
-        <div class="form-group">
-          <label class="control-label fadeIn third" for="fullName">Full name:</label>
-          <input input type="text" class="form-control fadeIn third" id="fullName" name="fullName"
-            [(ngModel)]="credentials.fullName" required minlength="5" maxlength="55" #fullName="ngModel" autofocus
-            placeholder="Enter Full Name" />
-
-        </div>
-        <span class="help-block" class="text-danger" *ngIf="fullName.errors?.required && fullName.touched">
-          Name field is required <br> <br></span>
-        <div class="form-group">
-          <label class="control-label fadeIn fourth" for="password">Password:</label>
-          <input type="password" class="form-control fadeIn fourth" id="password" name="password"
-            [(ngModel)]="credentials.password" minlength="6" maxlength="30" #password="ngModel"
-            placeholder="Enter Password" required />
-
-        </div>
-        <span class="help-block" class="text-danger" *ngIf="password.errors?.required && password.touched">
-          Please enter a password <br> <br></span>
-        <div class="form-group">
-          <label class="control-label fadeIn fourth" for="passwordConfirm">
-            Confirm Password:</label>
-          <input type="password" class="form-control fadeIn fourth" id="passwordConfirm" name="passwordConfirm"
-            [(ngModel)]="credentials.passwordConfirm" minlength="6" maxlength="30" #passwordConfirm="ngModel"
-            placeholder="Repeat Password" required />
+          Incorrect Email <br> <br></span>-->
 
 
-        </div>
-        <div> <span class="help-block" class="text-danger"
-            *ngIf="passwordConfirm.errors?.required && passwordConfirm.touched">
-            Please re-enter the password</span>
-          <br> <br></div>
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <label class="control-label fadeIn third" for="firstName">First Name:</label>
+                <input input type="text" class="form-control fadeIn third" id="firstName" name="firstName"
+                  [(ngModel)]="credentials.firstName" required minlength="5" maxlength="55" #firstName="ngModel" autofocus
+                  placeholder="Enter First Name" />
+      
+              </div>
+              <!-- <span class="help-block" class="text-danger" *ngIf="firstName.errors?.required && firstName.touched">
+                Name field is required <br> <br></span> -->
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label class="control-label fadeIn third" for="lastName">Last Name:</label>
+                <input input type="text" class="form-control fadeIn third" id="lastName" name="lastName"
+                  [(ngModel)]="credentials.lastName" required minlength="5" maxlength="55" #lastName="ngModel" autofocus
+                  placeholder="Enter Last Name" />
+      
+              </div>
+              <!-- <span class="help-block" class="text-danger" *ngIf="lastName.errors?.required && lastName.touched">
+                Last Name field is required <br> <br></span> -->
+    
+            </div>
+          </div>
+
+       
+<div class="row">
+  <div class="col">
+    <div class="form-group">
+      <label class="control-label fadeIn fourth" for="password">Password:</label>
+      <input type="password" class="form-control fadeIn fourth" id="password" name="password"
+        [(ngModel)]="credentials.password" minlength="6" maxlength="30" #password="ngModel"
+        placeholder="Enter Password" required />
+
+    </div>
+   
+  </div>
+  <div class="col">
+    <div class="form-group">
+      <label class="control-label fadeIn fourth" for="passwordConfirm">
+        Confirm Password:</label>
+      <input type="password" class="form-control fadeIn fourth" id="passwordConfirm" name="passwordConfirm"
+        [(ngModel)]="credentials.passwordConfirm" minlength="6" maxlength="30" #passwordConfirm="ngModel"
+        placeholder="Repeat Password" required />
+
+
+    </div>
+ 
+  </div>
+</div>
+          
+       
+
+
+       
+
+
+
+
+          <div class="form-group">
+            <label class="control-label fadeIn third" for="phoneNumber">Phone Number</label>
+            <input input type="text" class="form-control fadeIn third" id="phoneNumber" name="phoneNumber"
+              [(ngModel)]="credentials.phoneNumber" required minlength="5" maxlength="55" #phoneNumber="ngModel" autofocus
+              placeholder="Phone Name" />
+  
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <label class="control-label fadeIn third" for="streetNumber">Street Number:</label>
+                <input input type="number" min="0" class="form-control fadeIn third" id="streetNumber" name="streetNumber"
+                  [(ngModel)]="credentials.streetNumber" required minlength="5" maxlength="55" #streetNumber="ngModel" autofocus
+                  placeholder="Street Number" />
+      
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label class="control-label fadeIn third" for="streetName">Street Name:</label>
+                <input input type="text" class="form-control fadeIn third" id="streetName" name="streetName"
+                  [(ngModel)]="credentials.streetName" required minlength="5" maxlength="55" #streetName="ngModel" autofocus
+                  placeholder="Street Name" />
+      
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label class="control-label fadeIn third" for="unit">Unit Number:</label>
+                <input input type="number" min="0" class="form-control fadeIn third" id="unit" name="unit"
+                  [(ngModel)]="credentials.unit" required minlength="5" maxlength="55" #unit="ngModel" autofocus
+                  placeholder="Unit Number" />
+      
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <label class="control-label fadeIn third" for="province">Province:</label>
+                <input input type="text" class="form-control fadeIn third" id="province" name="province"
+                  [(ngModel)]="credentials.province" required minlength="5" maxlength="55" #province="ngModel" autofocus
+                  placeholder="Province" />
+      
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label class="control-label fadeIn third" for="country">Country:</label>
+                <input input type="text" class="form-control fadeIn third" id="country" name="country"
+                  [(ngModel)]="credentials.country" required minlength="5" maxlength="55" #country="ngModel" autofocus
+                  placeholder="Country" />
+      
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label class="control-label fadeIn third" for="postalCode">Postal Code:</label>
+                <input input type="text" class="form-control fadeIn third" id="postalCode" name="postalCode"
+                  [(ngModel)]="credentials.postalCode" required minlength="5" maxlength="55" #postalCode="ngModel" autofocus
+                  placeholder="Postal" />
+      
+              </div>
+            </div>
+          </div>
+
+         
+
+          
 
         <input type="submit" class="fadeIn fourth" value="Register" [disabled]="!form.form.valid"
           (click)="onSubmit()" />
+          
         <span *ngIf="registerError.length > 0" class="text-danger">{{registerError}}</span>
         <a class="btn back btn-default fadeIn fourth" routerLink='/home'>Back to home</a>
         <!-- <a <a class="btn btn-default" routerLink='/home'>Back to home</a> -->
