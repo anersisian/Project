@@ -1,0 +1,18 @@
+main {
+  width: 100%;
+  height: 100%;
+  background-color: #17242a;
+  color: white;
+}
+
+.tableStyle {
+  width: 100%;
+}
+
+td,
+tr {
+  padding: 1% 0 0 10%;
+
+  border: 1px solid black;
+  border-collapse: collapse;
+}

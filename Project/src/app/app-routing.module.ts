@@ -6,13 +6,16 @@ import { LoginComponent } from "./login/login.component";
 import { NotFoundPageComponent } from "./not-found-page/not-found-page.component";
 import { RegisterComponent } from "./register/register.component";
 import { SubscriptionsComponent } from "./subscriptions/subscriptions.component";
-import { ProfileComponent } from './profile/profile.component';
-import { LogoutComponent } from './logout/logout.component';
-import { AdminComponent } from './admin/admin.component';
+
+import { ProfileComponent } from "./profile/profile.component";
+import { LogoutComponent } from "./logout/logout.component";
+import { AdminComponent } from "./admin/admin.component";
+import { AccountPageComponent } from "./account-page/account-page.component";
 import { EditSubscriptionComponent } from './edit-subscription/edit-subscription.component';
 
 const routes: Routes = [
   { path: "home", component: MainPageComponent },
+  { path: "account-page/:userName", component: AccountPageComponent },
   { path: "register", component: RegisterComponent },
   { path: "login", component: LoginComponent },
   { path: "subscriptions", component: SubscriptionsComponent},
