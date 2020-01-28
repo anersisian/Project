@@ -17,6 +17,7 @@ export class RegisterComponent implements OnInit {
   message: Boolean = false;
 
   constructor(private http: HttpClient, private router: Router) {
+    
     this.registerError = ""; //error for register account
     this.credentials = new Credentials();
     this.credentials.userName = "";

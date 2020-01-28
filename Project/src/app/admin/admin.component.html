@@ -101,6 +101,7 @@
        <th>Price</th>
        <th>Activated?</th>
        <th></th>
+       <th></th>
      </tr>
    </thead>
    <tbody>
@@ -110,6 +111,7 @@
        <td>{{ s.subBoxType }}</td>
        <td>{{ s.subPrice}}</td>
        <td>{{ s.isActive}}</td>
+       <td><button (click)="editSubscription(s._id)" type="button" class="btn btn-warning">Edit</button></td>
        <td><button (click)="deleteSubscription(s._id)" type="button" class="btn btn-danger">Delete</button></td>
      </tr>
    </tbody>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from "@angular/router";
+import { Router, ActivatedRoute } from "@angular/router";
 import { DataModelManagerService } from "../data-model-manager.service";
 import { Subscriptions, User } from ".././data-model-classes";
 import { Subscription } from 'rxjs';
@@ -16,18 +16,50 @@ export class SubscriptionsComponent implements OnInit {
   users: User[];
   user: User;
   logged: Boolean;
-  
-  constructor(private m: DataModelManagerService, private router: Router) { }
+  userId: string;
+  userName: string;
+  message: string;
+
+  constructor(private m: DataModelManagerService, private router: Router, private route: ActivatedRoute) { }
   handler:any = null;
 
   ngOnInit() {
     this.m.subscriptionsGetAll().subscribe(s => (this.subscriptions = s));
-   // this.m.usersGetAll().subscribe(u => (this.users = u));
+    //this.m.usersGetAll().subscribe(u => (this.users = u));
     this.loadStripe();
   }
 
+  update(_id: string, subName, subPeriod, subBoxType, subPrice, isActive){
+    this.logged  = JSON.parse(localStorage.getItem("logged"));
+    this.userId = JSON.parse(localStorage.getItem("userId"));
+    this.userName = JSON.parse(localStorage.getItem("userName"));
+
+  this.m.usersGetByUsername(this.userName).subscribe(u =>{
+      this.user = u;
+  if(this.logged === true) 
+  {
+    const obj = {
+      _id: _id,
+      subName: subName,
+      subPeriod: subPeriod,
+      subBoxType: subBoxType,
+      subPrice: subPrice,
+      isActive: isActive
+    };
+
+    this.user.subscriptionInfo = [obj];
+    
+    this.m.usersUpdate(this.user._id, this.user.subscriptionInfo).subscribe(u=>this.message = u.message);
+    console.log(this.user.subscriptionInfo);
+    console.log(this.user._id + "   " + subName);
+    }else{
+    this.router.navigate(["/login"]);
+    }//!if
+   });
+}
+
   pay(amount, _id) {
-console.log(amount + " " + _id);
+  console.log(amount + " " + _id);
       var handler = (<any>window).StripeCheckout.configure({
         key: 'pk_test_CsnA1j2JoAbkCVNB1gGaPNxw00DxOzthfD',
         //locale: can specify location
@@ -36,10 +68,10 @@ console.log(amount + " " + _id);
           // Get the token ID to your server-side code for use.
           console.log(token)
           //TODO: update user with subscription passed
-          //this.m.usersUpdate(this.user._id, this.user.subscriptionInfo = this.subscriptionInfo).subscribe(u => u);
           //alert('Token Created!!');
+          //this.m.usersUpdate(this.user._id, this.user.subscriptionInfo = this.subscriptionInfo).subscribe(u => u);
         }
-  });
+    });
 
   this.logged  = JSON.parse(localStorage.getItem("logged"));
 

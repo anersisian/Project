@@ -39,12 +39,18 @@ export class DataModelManagerService {
     return this.http.get<User>(`${this.url}/api/users/${userName}`);
   }
 
+  //User Delete
   usersDelete(_id: string): Observable<any> {
     return this.http.delete(`${this.url}/api/users/${_id}/delete`, { responseType: 'text' });
   }
+  
   //Users Update
-  usersUpdate(id: number, value: any): Observable<Object> {
-    return this.http.put(`${this.url}/api/users/${id}/update`, value);
+  usersUpdate(_id: string, value: Subscriptions[]): Observable<any> {
+    console.log("update called   " + value);
+    return this.http.put<any>(`${this.url}/api/users/${_id}/update`, value, this.httpOptions)
+    .pipe(tap((value: Subscriptions) =>console.log({"message": "Updated"})),
+    catchError(this.handleError<any>('update')));
+
   }
 
   //Sub Get One

@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
   credentials: Credentials;
   loginError: string;
   logged: Boolean = false;
-
+  
   // Initialization
 
   constructor(
@@ -57,6 +57,9 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['/profile/', tokenDecoded.userName]);
         this.logged = true;
         localStorage.setItem("logged", JSON.stringify(this.logged));
+        localStorage.setItem("userId", JSON.stringify(tokenDecoded._id));
+        localStorage.setItem("userName", JSON.stringify(tokenDecoded.userName));
+        console.log(tokenDecoded.userName);
          console.log(data.token);
     },
       // If not successful...
