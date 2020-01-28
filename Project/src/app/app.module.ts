@@ -25,7 +25,10 @@ import { ProfileComponent } from './profile/profile.component';
 import { AdminComponent } from './admin/admin.component';
 import { ScrollToModule } from "@nicky-lenaers/ngx-scroll-to";
 import { EditSubscriptionComponent } from './edit-subscription/edit-subscription.component';
+
+import { AccountPageComponent } from './account-page/account-page.component';
 import { EditPhoneComponent } from './edit-phone/edit-phone.component';
+
 
 export function tokenGetter() {
   return localStorage.getItem('access_token');
@@ -46,7 +49,11 @@ const appRoutes: Routes = [{ path: "login", component: LoginComponent }];
     ProfileComponent,
     AdminComponent,
     EditSubscriptionComponent,
-    EditPhoneComponent
+
+    EditPhoneComponent,
+
+    AccountPageComponent
+
   ],
   imports: [
     BrowserModule,

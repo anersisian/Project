@@ -1,0 +1,30 @@
+<main>
+  <app-nav-bar></app-nav-bar>
+
+  <div class="container">
+    <div class="row">
+      <div class="col" *ngIf="user">
+        <h1 class="text-center">Hello {{ user.firstName }}</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <h4>Your next delivery date is:</h4>
+      </div>
+    </div>
+
+    &nbsp;
+    <div class="row">
+      <div class="col">
+        <h4>Your past deliveries</h4>
+      </div>
+    </div>
+
+    <table class="tableStyle">
+      <tr *ngFor="let u of users[0].pastDeliveries">
+        <td>{{ u }}</td>
+      </tr>
+    </table>
+  </div>
+</main>
