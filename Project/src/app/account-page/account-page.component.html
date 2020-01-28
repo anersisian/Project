@@ -22,8 +22,8 @@
     </div>
 
     <table class="tableStyle">
-      <tr *ngFor="let u of users">
-        <td>{{ u.subscriptionInfo[0].date }}</td>
+      <tr *ngFor="let u of users[0].pastDeliveries">
+        <td>{{ u }}</td>
       </tr>
     </table>
   </div>
