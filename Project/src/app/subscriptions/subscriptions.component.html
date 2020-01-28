@@ -19,7 +19,7 @@
           <p class="card-text">{{ s.isActive }}</p>
 
           <button
-            (click)="pay(s.subPrice, s._id)"
+            (click)="pay(s._id, s.subName, s.subPeriod, s.subBoxType, s.subPrice, s.isActive )"
             class="btn btn-info btn-block"
           >
             Subscribe

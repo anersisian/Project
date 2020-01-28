@@ -3,11 +3,13 @@ import { Router, ActivatedRoute } from "@angular/router";
 import { DataModelManagerService } from "../data-model-manager.service";
 import { Subscriptions, User } from ".././data-model-classes";
 import { Subscription } from 'rxjs';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-subscriptions',
   templateUrl: './subscriptions.component.html',
-  styleUrls: ['./subscriptions.component.css']
+  styleUrls: ['./subscriptions.component.css'],
+  providers: [DatePipe]
 })
 export class SubscriptionsComponent implements OnInit {
 
@@ -19,8 +21,24 @@ export class SubscriptionsComponent implements OnInit {
   userId: string;
   userName: string;
   message: string;
+  // myDate = new Date().toDateString();
 
-  constructor(private m: DataModelManagerService, private router: Router, private route: ActivatedRoute) { }
+  myDate = new Date();
+  dateMain: string;
+ 
+
+
+  
+  constructor(private m: DataModelManagerService, private router: Router, private route: ActivatedRoute, private datePipe: DatePipe) { 
+    
+    this.myDate.setDate(this.myDate.getDate() + 7);
+
+    this.dateMain = this.myDate.getDate().toString() + "/"+(this.myDate.getMonth() + 1).toString() + "/" + this.myDate.getFullYear().toString();
+
+  }
+
+  
+  
   handler:any = null;
 
   ngOnInit() {
@@ -44,10 +62,14 @@ export class SubscriptionsComponent implements OnInit {
       subPeriod: subPeriod,
       subBoxType: subBoxType,
       subPrice: subPrice,
-      isActive: isActive
+      isActive: isActive,
+      date: this.dateMain
     };
 
     this.user.subscriptionInfo = [obj];
+    console.log(this.user.subscriptionInfo[0].date);
+
+    
     
     this.m.usersUpdate(this.user._id, this.user.subscriptionInfo).subscribe(u=>this.message = u.message);
     console.log(this.user.subscriptionInfo);

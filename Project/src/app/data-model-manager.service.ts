@@ -53,9 +53,17 @@ export class DataModelManagerService {
 
   }
 
+
+  //Subscription Update
+  // /api/subscriptions/:id
+  subscriptionsUpdate(_id: string, value: Subscriptions): Observable<any>{
+    return this.http.put<any>(`${this.url}/api/subscriptions/${_id}`, value, this.httpOptions)
+    .pipe(tap((value: Subscriptions) =>console.log({"message": "Updated"})),
+    catchError(this.handleError<any>('update')));
+  }
   //Sub Get One
-  subGetById(subName: string): Observable<Subscriptions> {
-    return this.http.get<Subscriptions>(`${this.url}/api/subscriptions/${subName}/find`);
+  subGetById(_id: string): Observable<Subscriptions> {
+    return this.http.get<Subscriptions>(`${this.url}/api/subscriptions/${_id}`);
   }
 
   //Sub Get All

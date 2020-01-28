@@ -66,6 +66,11 @@ export class AdminComponent implements OnInit {
       console.log("removed: " + _id);
     }
     
+    editSubscription(_id)
+    {
+      console.log(_id);
+      this.router.navigate(["/subscription/", _id]);
+    }
 
     onSubmit(): void {
       this.create(this.subscription).subscribe(
