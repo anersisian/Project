@@ -24,3 +24,18 @@
   margin-top: 2%;
   margin-left: 10%;
 }
+
+.firstSection{
+  background-color: #17242a;
+  height: 100%;
+  width: 100%;
+  color: white;
+}
+.text-left{
+  margin-top: 2%;
+}
+.same{
+  height: 50px;
+  width: 240px;
+  font-size: medium;
+}
