@@ -9,6 +9,7 @@ export class Subscriptions {
   subBoxType: string;
   subPrice: number;
   isActive: boolean;
+  date: String;
 }
 
 // User Class
@@ -29,6 +30,7 @@ export class User {
   country: string;
   postalCode: string;
   subscriptionInfo?: Subscriptions[];
+  pastDeliveries?: String[];
 }
 
 

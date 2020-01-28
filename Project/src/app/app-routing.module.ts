@@ -9,6 +9,7 @@ import { SubscriptionsComponent } from "./subscriptions/subscriptions.component"
 import { ProfileComponent } from './profile/profile.component';
 import { LogoutComponent } from './logout/logout.component';
 import { AdminComponent } from './admin/admin.component';
+import { EditSubscriptionComponent } from './edit-subscription/edit-subscription.component';
 
 const routes: Routes = [
   { path: "home", component: MainPageComponent },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: "profile/:userName", component: ProfileComponent},
   { path: "logout", component: LogoutComponent},
   { path: "admin/:userName", component: AdminComponent},
+  { path: "subscription/:_id", component: EditSubscriptionComponent},
   { path: "", redirectTo: "/home", pathMatch: "full" },
   { path: "**", component: NotFoundPageComponent }
 ];
