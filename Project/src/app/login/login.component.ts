@@ -1,23 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
-import { AuthService } from '../auth.service';
-import { Router } from '@angular/router';
-import { JwtHelperService } from '@auth0/angular-jwt';
-import { HttpErrorResponse } from '@angular/common/http';
-import { DataModelManagerService } from '../data-model-manager.service';
+import { AuthService } from "../auth.service";
+import { Router } from "@angular/router";
+import { JwtHelperService } from "@auth0/angular-jwt";
+import { HttpErrorResponse } from "@angular/common/http";
+import { DataModelManagerService } from "../data-model-manager.service";
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: "app-login",
+  templateUrl: "./login.component.html",
+  styleUrls: ["./login.component.css"]
 })
 export class LoginComponent implements OnInit {
-
   // Properties
   credentials: Credentials;
   loginError: string;
   logged: Boolean = false;
-  
+
   // Initialization
 
   constructor(
@@ -26,16 +25,13 @@ export class LoginComponent implements OnInit {
     private a: AuthService,
     private jwtHelper: JwtHelperService
   ) {
-
-    this.loginError = ''; //error for login into account
+    this.loginError = ""; //error for login into account
     this.credentials = new Credentials();
-    this.credentials.userName = '';
-    this.credentials.password = '';
-
+    this.credentials.userName = "";
+    this.credentials.password = "";
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   // Methods
 
@@ -46,22 +42,23 @@ export class LoginComponent implements OnInit {
     // Clear the existing token
     localStorage.removeItem("access_token");
 
-    this.a.login(this.credentials).subscribe(data => {
-      // If successful...
-      // Save the token in the browser's local storage
-      localStorage.setItem('access_token', data.token);
-      let tokenDecoded = this.jwtHelper.decodeToken(data.token);
-      // Navigate to a landing/info view (home page?)
-     // this.router.navigate(['/users/account', tokenDecoded.userName]);
+    this.a.login(this.credentials).subscribe(
+      data => {
+        // If successful...
+        // Save the token in the browser's local storage
+        localStorage.setItem("access_token", data.token);
+        let tokenDecoded = this.jwtHelper.decodeToken(data.token);
+        // Navigate to a landing/info view (home page?)
+        // this.router.navigate(['/users/account', tokenDecoded.userName]);
         //changed for now ----- TODO: make it a unique user profile management page
-        this.router.navigate(['/profile/', tokenDecoded.userName]);
+        this.router.navigate(["/account-page/", tokenDecoded.userName]);
         this.logged = true;
         localStorage.setItem("logged", JSON.stringify(this.logged));
         localStorage.setItem("userId", JSON.stringify(tokenDecoded._id));
         localStorage.setItem("userName", JSON.stringify(tokenDecoded.userName));
         console.log(tokenDecoded.userName);
-         console.log(data.token);
-    },
+        console.log(data.token);
+      },
       // If not successful...
       // console.log the error
       //handle errors
@@ -71,7 +68,6 @@ export class LoginComponent implements OnInit {
       }
     );
   }
-  
 }
 
 // User name and password

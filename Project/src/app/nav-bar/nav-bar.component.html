@@ -23,24 +23,39 @@
 
 </nav> -->
 
-
-
 <header>
   <div class="logo-container">
     <img src="../../assets/images/favicon.png" alt="logo" />
-    <h4 class="logo"><a routerLink="/home" routerLinkActive="active">C-Kiosk</a> </h4>
+    <h4 class="logo">
+      <a routerLink="/home" routerLinkActive="active">C-Kiosk</a>
+    </h4>
   </div>
   <nav class="stroke">
     <ul class="nav-links">
-      <li *ngIf="isLogged"><a class="nav-link" routerLink="/profile/{{userProfile}}"
-          routerLinkActive="active">Profile</a></li>
-      <li *ngIf="!isLogged"><a class="nav-link" routerLink="/login" routerLinkActive="active">LogIn</a></li>
-      <li *ngIf="isLogged"><a class="nav-link" routerLink="/logout" routerLinkActive="active">LogOut</a></li>
-      <li><a class="nav-link" routerLink="/register" routerLinkActive="active">Register</a></li>
-
+      <li *ngIf="isLogged">
+        <a
+          class="nav-link"
+          routerLink="/account-page/{{ userProfile }}"
+          routerLinkActive="active"
+          >Account</a
+        >
+      </li>
+      <li *ngIf="!isLogged">
+        <a class="nav-link" routerLink="/login" routerLinkActive="active"
+          >LogIn</a
+        >
+      </li>
+      <li *ngIf="isLogged">
+        <a class="nav-link" routerLink="/logout" routerLinkActive="active"
+          >LogOut</a
+        >
+      </li>
+      <li>
+        <a class="nav-link" routerLink="/register" routerLinkActive="active"
+          >Register</a
+        >
+      </li>
     </ul>
-
   </nav>
-
 </header>
-<hr class="new1">
+<hr class="new1" />
