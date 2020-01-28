@@ -66,10 +66,7 @@ input[type="reset"] {
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  
 }
-
-
 
 input[type="button"]:not([disabled]):hover,
 input[type="submit"]:not([disabled]):hover,
@@ -112,7 +109,7 @@ input[type="number"] {
 
 input[type="text"]:focus,
 input[type="password"]:focus,
-input[type="number"]:focus{
+input[type="number"]:focus {
   background-color: #fff;
   border-bottom: 2px solid #5dcfa4;
 }
@@ -264,9 +261,9 @@ input[type="number"]:placeholder {
 }
 
 #secondPage {
-  height: 100%;
+  height: 130%;
 
-  background-color: #17242A;
+  background-color: #17242a;
 
   background-position: center;
   background-repeat: no-repeat;
@@ -288,5 +285,4 @@ a {
   padding: 12px 27px;
   font-size: 16px;
   cursor: pointer;
-
 }
