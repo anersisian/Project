@@ -21,21 +21,23 @@
     </div>
     <div class="row">
       <div class="col-md" ng-app="">
-        <form>
+
+        <form (ngSubmit)="onSubmit()" #form="ngForm">
           <div class="form-group">
             <label class="control-label fadeIn third" for="phoneNumber">Enter new number: </label>
             <input input type="text" class="form-control fadeIn third" id="phoneNumber" name="phoneNumber"
-              [(ngModel)]="credentials.phoneNumber" required minlength="5" maxlength="10" #phoneNumber="ngModel" autofocus
+              [(ngModel)]="user.phoneNumber" required minlength="5" maxlength="10" #phoneNumber="ngModel" autofocus
               placeholder="new number" />
-  
+
           </div>
           
+          <button type="submit" class=" btn btn-outline-success btn-lg">Submit</button>
         </form>
       </div>
     </div>
 
     <div class="row">
-      <div class="col-md"><button (click)="updatePhone(u.userName)" class=" btn btn-outline-success btn-lg">Submit</button>
+      <div class="col-md">
       </div>
       
     </div>
