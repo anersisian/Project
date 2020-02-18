@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { User, Subscriptions } from '../data-model-classes';
+import { User, Subscriptions, Reviews } from '../data-model-classes';
 import { DataModelManagerService } from '../data-model-manager.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from "@angular/common/http";
@@ -15,7 +15,8 @@ export class AdminComponent implements OnInit {
   subList: Subscriptions[];
   users: User[];
   user: User;
-
+  reviews: Reviews[];
+  
   private url: string = "https://bts530-project.herokuapp.com";
   subscription: Subscription;
   sub: Boolean = false;
@@ -46,6 +47,7 @@ export class AdminComponent implements OnInit {
           console.log(this.user.isAdmin);
           this.m.usersGetAll().subscribe(u => (this.users = u));
           this.m.subscriptionsGetAll().subscribe(s => (this.subList = s));
+          this.m.reviewsGetAll().subscribe(r => (this.reviews = r));
           this.m.user = this.user;
         }else{
           this.router.navigate(["/home"]);

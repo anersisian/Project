@@ -2,8 +2,8 @@ import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Observable, of, Subscription } from "rxjs";
 import { catchError, tap } from "rxjs/operators";
-import { User } from "./data-model-classes";
-import {Subscriptions} from "./data-model-classes";
+import { User, Subscriptions, Reviews } from "./data-model-classes";
+import { ReviewPageComponent } from './review-page/review-page.component';
 @Injectable({
   providedIn: "root"
 })
@@ -27,6 +27,7 @@ export class DataModelManagerService {
   
   subscriptions: Subscriptions;
   user: User;
+  reviews: Reviews; 
   logged: Boolean;
 
   //Users Get All
@@ -91,14 +92,25 @@ export class DataModelManagerService {
   subscriptionDelete(_id: string): Observable<any>{
   return this.http.delete(`${this.url}/api/subscriptions/${_id}`, {responseType: 'text'});
   }
-  //Sub Confirm Subscription
-  // subscriptionConfirm(id: string, item: Subscriptions[]): Observable<any> {
-  //   return this.http.put<any>(`${this.url}/api/subscriptions/${id}/confirmed`, item, this.httpOptions)
-  //     .pipe(
-  //       tap((newItem: Subscriptions) => console.log({ "message": "Subscription Confirmed" })),
-  //       catchError(this.handleError<any>('confirm'))
-  //     );
-  // }
 
-  
+//reviews---------
+
+//Reviews Get All
+  reviewsGetAll(): Observable<Reviews[]> {
+  return this.http.get<Reviews[]>(`${this.url}/api/reviews`);
+}
+
+ //Reviews Get One
+ reviewsGetById(_id: string): Observable<Reviews> {
+  console.log("subGetById called: " + _id);
+  return this.http.get<Reviews>(`${this.url}/api/reviews/${_id}`);
+}
+
+ //Reviews Get One
+ getUserReviews(_id: string): Observable<Reviews[]> {
+  console.log("subGetById called: " + _id);
+  return this.http.get<Reviews[]>(`${this.url}/api/reviews/find/${_id}`);
+}
+
+
 } //

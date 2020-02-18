@@ -33,4 +33,13 @@ export class User {
   pastDeliveries?: Subscriptions[];
 }
 
-
+//Reviews Class
+export class Reviews {
+    subId: String;
+    userId: String;
+    subName: String;
+    userFullName: String;
+    review: String;
+    date: String;
+    rating: String;
+}

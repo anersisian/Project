@@ -1,7 +1,7 @@
 <main>
   <app-nav-bar></app-nav-bar>
 
-  <div class="container">
+  <div class="container ">
     <div class="row">
       <div class="col">
         <h1  *ngIf="user.isAdmin; else adminButton" class="text-center">Hello {{ user.firstName }} 
@@ -13,12 +13,36 @@
         </ng-template>
       </div>
     </div>
-
-    <div class="row">
-      <div class="col" *ngFor="let u of user.subscriptionInfo">
+    &nbsp;
+    <hr>
+    &nbsp;
+    <div class="row ">
+      <div class="col-md-7" *ngFor="let u of user.subscriptionInfo"> 
         <h4>Your next delivery date is: {{u.date}} 
            <button style="margin-left: 1em;" routerLink="/view-subscription/{{u._id}}" class="btn btn-outline-success">View Subscription</button>
+          
           </h4>
+          
+      </div>
+
+      <div class="col-md-2">
+        <p>Skip for: </p>          
+      </div>
+
+ 
+
+      <div class="col-md-2">
+        <select class="form-control form-control-sm" (change)="selectOption($event.target.value)" [(ngModel)]="selected">
+          <option [value]="1">1 week</option>
+          <option [value]="2">2 weeks</option>
+          <option [value]="3">1 month</option>
+        </select>
+      </div>
+
+
+      
+      <div class="col-md-1">
+        <button class="btn btn-outline-success" (click)="pause()">Apply</button>
       </div>
     </div>
 
@@ -33,8 +57,28 @@
       <tr *ngFor="let u of user.pastDeliveries">
         <td>{{ u.subName }}</td>
         <td>{{u.date}}</td>
-        <td><button style="margin: .5em;" routerLink="" class="btn btn-outline-success">View Subscription</button></td>
+        <td><button style="margin: .5em;" routerLink="/view-subscription/{{u._id}}" class="btn btn-outline-success">View Subscription</button></td>
+        <td><button style="margin: .5em;" routerLink="/review/{{user.userName}}" class="btn btn-outline-success">Leave a review</button></td>
       </tr>
     </table>
+
+    &nbsp;
+    <div class="row">
+      <div class="col">
+        <h4 [hidden]="!reviews">Your Reviews</h4>
+      </div>
+    </div>
+
+    <table class="tableStyle text-center">
+      <tr *ngFor="let r of reviews">
+        <td>{{r.subName}}</td>
+        <td>{{ r.review }}</td>
+        <td>{{r.rating}}</td>
+        <td>{{ r.date}}</td>
+        <!-- <td><button style="margin: .5em;" routerLink="/view-subscription/{{r._id}}" class="btn btn-outline-success">View Subscription</button></td> -->
+        <!-- <td><button style="margin: .5em;" routerLink="/review/{{user.userName}}" class="btn btn-outline-success">Leave a review</button></td> -->
+      </tr>
+    </table>
+
   </div>
 </main>

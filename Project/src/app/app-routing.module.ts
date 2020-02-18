@@ -15,6 +15,7 @@ import { AdminComponent } from "./admin/admin.component";
 import { AccountPageComponent } from "./account-page/account-page.component";
 import { EditSubscriptionComponent } from './edit-subscription/edit-subscription.component';
 import { ViewSubscriptionComponent } from './view-subscription/view-subscription.component';
+import { ReviewPageComponent } from './review-page/review-page.component';
 
 
 const routes: Routes = [
@@ -29,6 +30,7 @@ const routes: Routes = [
   { path: "profile/edit-phone/:userName", component: EditPhoneComponent},
   { path: "subscription/:_id", component: EditSubscriptionComponent},
   { path: "view-subscription/:_id", component: ViewSubscriptionComponent},
+  { path: "review/:userName", component: ReviewPageComponent},
   { path: "", redirectTo: "/home", pathMatch: "full" },
   { path: "**", component: NotFoundPageComponent }
 ];
