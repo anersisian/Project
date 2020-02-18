@@ -28,6 +28,7 @@ import { EditSubscriptionComponent } from './edit-subscription/edit-subscription
 
 import { AccountPageComponent } from './account-page/account-page.component';
 import { EditPhoneComponent } from './edit-phone/edit-phone.component';
+import { ViewSubscriptionComponent } from './view-subscription/view-subscription.component';
 
 
 export function tokenGetter() {
@@ -52,7 +53,9 @@ const appRoutes: Routes = [{ path: "login", component: LoginComponent }];
 
     EditPhoneComponent,
 
-    AccountPageComponent
+    AccountPageComponent,
+
+    ViewSubscriptionComponent
 
   ],
   imports: [

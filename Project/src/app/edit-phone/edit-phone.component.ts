@@ -34,7 +34,7 @@ export class EditPhoneComponent implements OnInit {
 
     onSubmit(): void {
       
-    this.m.usersUpdate(this.user._id, this.user).subscribe(
+    /*this.m.usersUpdate(this.user._id, this.user).subscribe(
       res => {
         this.sub = true;
         console.log(this.user._id);
@@ -47,7 +47,7 @@ export class EditPhoneComponent implements OnInit {
           this.subError = "Failed to update phone";
         }
       }
-      )
+      )*/
     }
   // ngOnInit() {
     

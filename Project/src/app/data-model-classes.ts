@@ -30,7 +30,7 @@ export class User {
   country: string;
   postalCode: string;
   subscriptionInfo?: Subscriptions[];
-  pastDeliveries?: String[];
+  pastDeliveries?: Subscriptions[];
 }
 
 
