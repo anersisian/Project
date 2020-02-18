@@ -1,0 +1,14 @@
+<div class="row justify-content-md-center">
+    <!-- <div *ngFor="let s of subscription"> -->
+      <div class="card text-center col-4">
+        <h5 class="card-header">{{ subscription.subName }}</h5>
+        <div class="card-body">
+          <p class="card-text">{{ subscription.subPeriod }}</p>
+          <p class="card-text">{{ subscription.subBoxType }}</p>
+          <p class="card-text">${{ subscription.subPrice }}/mo</p>
+          <p class="card-text">{{ subscription.date }}</p>
+          <p class="card-text">{{ subscription.isActive }}</p>
+        </div>
+      </div>
+    <!-- </div> -->
+  </div>

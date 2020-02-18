@@ -45,14 +45,22 @@ export class DataModelManagerService {
   }
   
   //Users Subscription Update
-  usersUpdate(_id: string, value: any): Observable<any> {
+  usersUpdateSubscriptionInfo(_id: string, value: any): Observable<any> {
     console.log("update called   " + value);
-    return this.http.put<any>(`${this.url}/api/users/${_id}/update`, value, this.httpOptions)
-    .pipe(tap((value: any) =>console.log({"message": "Updated"})),
+    return this.http.put<any>(`${this.url}/api/users/${_id}/updateSubscriptionInfo`, value, this.httpOptions)
+    .pipe(tap((value: any) =>console.log({"message": "Updated subscription info"})),
     catchError(this.handleError<any>('update')));
 
   }
 
+  //Users Subscription Update
+  usersUpdatePastDeliveries(_id: string, value: any): Observable<any> {
+    console.log("update called   " + value);
+    return this.http.put<any>(`${this.url}/api/users/${_id}/updatePastDeliveries`, value, this.httpOptions)
+    .pipe(tap((value: any) =>console.log({"message": "Updated past deliveries"})),
+    catchError(this.handleError<any>('update')));
+
+  }
 
   //userPhoneUpdate
   userPhoneUpdate(_id: string, value: any): Observable<any> {
@@ -70,6 +78,7 @@ export class DataModelManagerService {
   }
   //Sub Get One
   subGetById(_id: string): Observable<Subscriptions> {
+    console.log("subGetById called: " + _id);
     return this.http.get<Subscriptions>(`${this.url}/api/subscriptions/${_id}`);
   }
 

@@ -11,8 +11,8 @@ main {
 
 td,
 tr {
-  padding: 1% 0 0 10%;
-
+  /* padding: 1% 0 0 10%; */
+  padding: .5em;
   border: 1px solid black;
-  border-collapse: collapse;
+  /* border-collapse: collapse; */
 }

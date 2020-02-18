@@ -33,7 +33,9 @@ export class SubscriptionsComponent implements OnInit {
     
     this.myDate.setDate(this.myDate.getDate() + 7);
 
-    this.dateMain = this.myDate.getDate().toString() + "/"+(this.myDate.getMonth() + 1).toString() + "/" + this.myDate.getFullYear().toString();
+    this.dateMain = ('0' + this.myDate.getDate()).toString().slice(-2) + "/"+('0'+(this.myDate.getMonth() + 1)).toString().slice(-2) + "/" + this.myDate.getFullYear().toString();
+
+
 
   }
 
@@ -71,7 +73,7 @@ export class SubscriptionsComponent implements OnInit {
 
     
     
-    this.m.usersUpdate(this.user._id, this.user.subscriptionInfo).subscribe(u=>this.message = u.message);
+    this.m.usersUpdateSubscriptionInfo(this.user._id, this.user.subscriptionInfo).subscribe(u=>this.message = u.message);
     console.log(this.user.subscriptionInfo);
     console.log(this.user._id + "   " + subName);
     }else{

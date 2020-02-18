@@ -5,7 +5,7 @@
     <div class="row">
       <div class="col">
         <h1  *ngIf="user.isAdmin; else adminButton" class="text-center">Hello {{ user.firstName }} 
-          <button routerLink="/profile/{{user.userName}}" class="btn btn-outline-success">Your Profile</button>
+          <button style="margin-right: 1em;" routerLink="/profile/{{user.userName}}" class="btn btn-outline-success">Your Profile</button>
            <button routerLink="/admin/{{user.userName}}" class="btn btn-outline-warning">Admin Page</button></h1>
         <ng-template #adminButton>
           <h1 class="text-center">Hello {{ user.firstName }}
@@ -16,7 +16,9 @@
 
     <div class="row">
       <div class="col" *ngFor="let u of user.subscriptionInfo">
-        <h4>Your next delivery date is: {{u.date}}</h4>
+        <h4>Your next delivery date is: {{u.date}} 
+           <button style="margin-left: 1em;" routerLink="/view-subscription/{{u._id}}" class="btn btn-outline-success">View Subscription</button>
+          </h4>
       </div>
     </div>
 
@@ -27,9 +29,11 @@
       </div>
     </div>
 
-    <table class="tableStyle">
+    <table class="tableStyle text-center">
       <tr *ngFor="let u of user.pastDeliveries">
-        <td>{{ u }}</td>
+        <td>{{ u.subName }}</td>
+        <td>{{u.date}}</td>
+        <td><button style="margin: .5em;" routerLink="" class="btn btn-outline-success">View Subscription</button></td>
       </tr>
     </table>
   </div>
