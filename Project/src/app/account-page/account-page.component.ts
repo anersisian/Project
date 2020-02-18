@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { User } from "../data-model-classes";
+import { User, Reviews } from "../data-model-classes";
 import { DataModelManagerService } from "../data-model-manager.service";
 import { ActivatedRoute } from "@angular/router";
 import { DatePipe } from "@angular/common";
@@ -13,11 +13,14 @@ import { DatePipe } from "@angular/common";
 export class AccountPageComponent implements OnInit {
   user: User;
   users: User[];
+  reviews: Reviews[];
   myDate = new Date();
   currentDate: String;
   message: string;
 
   currentDateTemp: String;
+
+  lengthPause: Number;
 
   constructor(
     private m: DataModelManagerService,
@@ -38,7 +41,13 @@ export class AccountPageComponent implements OnInit {
         this.user.subscriptionInfo = [];
       }
       this.m.user = this.user;
-    });
+
+      this.m.getUserReviews(this.m.user._id).subscribe(r => {
+        this.reviews = r;
+      });
+      //console.log(this.m.user.subscriptionInfo[0].date);
+      //console.log(this.user.subscriptionInfo[0].date);
+    
 
     var currentDateTemp = this.currentDate.split("/",3);
     var subscriptionDateTemp = this.m.user.subscriptionInfo[0].date.split("/",3);
@@ -54,7 +63,7 @@ export class AccountPageComponent implements OnInit {
           console.log(this.m.user.pastDeliveries[0]);
           this.m.usersUpdatePastDeliveries(this.m.user._id, this.m.user.pastDeliveries).subscribe(u=>this.message = u.message);
     
-          let tempDate = currentDateTemp[2]+'-'+currentDateTemp[1]+'-'+currentDateTemp[0]+'T00:00:00';
+          let tempDate = subscriptionDateTemp[2]+'-'+subscriptionDateTemp[1]+'-'+subscriptionDateTemp[0]+'T00:00:00';
     
           console.log(tempDate);
           
@@ -77,5 +86,60 @@ export class AccountPageComponent implements OnInit {
     {
       console.log("Date has not expired yet");
     }
+  });
+  }
+
+  pause() {
+    let userName = this.route.snapshot.params["userName"];
+    this.m.usersGetByUsername(userName).subscribe(u => {
+      this.user = u;
+      this.m.user = this.user;
+
+      var pauseDateTemp = this.m.user.subscriptionInfo[0].date.split("/",3);
+      let tempPause = pauseDateTemp[2]+'-'+pauseDateTemp[1]+'-'+pauseDateTemp[0]+'T00:00:00';
+    
+          console.log(pauseDateTemp);
+          
+          
+    //nepravilno!!!!
+          let newDatePause = new Date(tempPause);
+
+          if(this.lengthPause == 1)
+          {
+            newDatePause.setDate(newDatePause.getDate() + 7);
+            this.currentDateTemp = ('0' + newDatePause.getDate()).toString().slice(-2) + "/"+('0'+(newDatePause.getMonth() + 1)).toString().slice(-2) + "/" + newDatePause.getFullYear().toString();
+          
+            this.m.user.subscriptionInfo[0].date = this.currentDateTemp;
+            this.m.usersUpdateSubscriptionInfo(this.m.user._id, this.m.user.subscriptionInfo).subscribe(u=>this.message = u.message);
+          } else 
+          if(this.lengthPause == 2)
+          {
+            newDatePause.setDate(newDatePause.getDate() + 14);
+            this.currentDateTemp = ('0' + newDatePause.getDate()).toString().slice(-2) + "/"+('0'+(newDatePause.getMonth() + 1)).toString().slice(-2) + "/" + newDatePause.getFullYear().toString();
+          
+            this.m.user.subscriptionInfo[0].date = this.currentDateTemp;
+            this.m.usersUpdateSubscriptionInfo(this.m.user._id, this.m.user.subscriptionInfo).subscribe(u=>this.message = u.message);
+          } else 
+          if(this.lengthPause == 3)
+          {
+            newDatePause.setDate(newDatePause.getDate() + 30);
+            this.currentDateTemp = ('0' + newDatePause.getDate()).toString().slice(-2) + "/"+('0'+(newDatePause.getMonth() + 1)).toString().slice(-2) + "/" + newDatePause.getFullYear().toString();
+          
+            this.m.user.subscriptionInfo[0].date = this.currentDateTemp;
+            this.m.usersUpdateSubscriptionInfo(this.m.user._id, this.m.user.subscriptionInfo).subscribe(u=>this.message = u.message);
+          }
+
+         
+
+
+    });
+  }
+
+  selectOption(id: number) {
+    //getted from event
+    this.lengthPause = id;
+    console.log(this.lengthPause);
+    //getted from binding
+    
   }
 }
