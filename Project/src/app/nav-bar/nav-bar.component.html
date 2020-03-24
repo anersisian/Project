@@ -6,6 +6,7 @@
       <a routerLink="/home" routerLinkActive="active"><span
           [ngStyle]="{'color': whichMode ? '#17242a' : '#f4ff61'}">C-KIOSK</span></a>
     </h4>
+    
   </div>
   <nav class="stroke">
     <ul class="nav-links">
@@ -32,6 +33,16 @@
         <input class="nav-link toggle" type="checkbox" id="switch" name="theme" [(ngModel)]="isChecked"
           (change)="change()" /><label for="switch">Toggle</label>
 
+      </li>
+      <li>
+        <a 
+        class="btn" (click)="useLanguage('en')">EN
+        </a>
+      </li>
+      <li>
+        <a class="btn"
+          (click)="useLanguage('fr')">FR
+        </a>
       </li>
     </ul>
   </nav>

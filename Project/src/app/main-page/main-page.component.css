@@ -199,10 +199,12 @@ section {
 }
 
 .intro-text h1 {
-	font-size: 4em;
-	font-weight: 800;
-	text-transform: uppercase;
-	letter-spacing: 10px;
+  font-size: 4em;
+  font-weight: 800;
+  color: #27aa80;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+
 }
 
 ::-webkit-scrollbar {

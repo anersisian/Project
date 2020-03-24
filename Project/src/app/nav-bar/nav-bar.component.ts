@@ -7,6 +7,7 @@ import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { HttpErrorResponse } from '@angular/common/http';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
 	selector: 'app-nav-bar',
@@ -14,6 +15,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 	styleUrls: [ './nav-bar.component.css' ]
 })
 export class NavBarComponent implements OnInit {
+
 	user: User;
 	isLogged: Boolean;
 	userProfile: String;
@@ -24,8 +26,10 @@ export class NavBarComponent implements OnInit {
 		private route: ActivatedRoute,
 		private a: AuthService,
 		private jwtHelper: JwtHelperService,
-		private router: Router
+    private router: Router,
+    private translate: TranslateService
 	) {
+    translate.setDefaultLang('en');
 		this.isLogged = JSON.parse(localStorage.getItem('logged'));
 
 		let tokenn = localStorage.getItem('access_token');
@@ -39,6 +43,10 @@ export class NavBarComponent implements OnInit {
 	ngOnInit() {
 		this.m.theme.subscribe((mode) => (this.whichMode = mode));
 	}
+
+   useLanguage(language: string) {
+    this.translate.use(language);
+}
 
 	change() {
 		if (this.whichMode === true) {
