@@ -1,6 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
-import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
+import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { AngularSvgIconModule } from "angular-svg-icon";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -31,6 +31,9 @@ import { EditPhoneComponent } from './edit-phone/edit-phone.component';
 import { ViewSubscriptionComponent } from './view-subscription/view-subscription.component';
 import { ReviewPageComponent } from './review-page/review-page.component';
 
+// import ngx-translate and the http loader
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
 export function tokenGetter() {
   return localStorage.getItem('access_token');
@@ -76,8 +79,17 @@ const appRoutes: Routes = [{ path: "login", component: LoginComponent }];
         tokenGetter: tokenGetter,
         authScheme: 'JWT'
       }
-    })
-  ],
+    }),
+  // ngx-translate and the loader module
+  HttpClientModule,
+  TranslateModule.forRoot({
+      loader: {
+          provide: TranslateLoader,
+          useFactory: HttpLoaderFactory,
+          deps: [HttpClient]
+      }
+  })
+],
   providers: [
     DataModelManagerService,
     AuthService,
@@ -91,3 +103,8 @@ const appRoutes: Routes = [{ path: "login", component: LoginComponent }];
   bootstrap: [AppComponent]
 })
 export class AppModule {}
+
+// required for AOT (ahead of time) compilation
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}

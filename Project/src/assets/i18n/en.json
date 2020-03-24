@@ -1,0 +1,37 @@
+{
+    "i18n": {
+        "future": "Future is now",
+        "hello": "Hello",
+        "profile": "Your Profile",
+        "admin-pg": "Admin Page",
+        "delivery-date": "Your next delivery date is:",
+        "view-sub": "View Subscription",
+        "skip": "Skip for:",
+        "week": "week",
+        "month": "month",
+        "apply": "Apply",
+        "past": "Your past deliveries",
+        "review": "Leave a review",
+        "your-reviews": "Your Reviews",
+        "reviews": "Reviews",
+        "user-list": "List of Users",
+        "user-name": "User Name",
+        "user": "User",
+        "full-name": "Full Name",
+        "activated": "Activated",
+        "delete": "Delete",
+        "create": "Create",
+        "edit": "Edit",
+        "create-sub": "Create a Subscription",
+        "del-sub": "Delete Subscription",
+        "sub-name": "Subscription Name",
+        "sub-period": "Subscription Period",
+        "sub-type": "Subscription Box Type",
+        "sub-price": "Subscription Price",
+        "enter": "Enter",
+        "yes": "Yes",
+        "no": "No",
+        "back-home": "Back to home"
+
+    }
+}
