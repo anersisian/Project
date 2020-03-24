@@ -82,7 +82,7 @@ nav {
 header {
   display: flex;
   justify-items: center;
-  width: 80%;
+  width: 90%;
 
   margin: auto;
   align-items: center;
@@ -115,7 +115,7 @@ nav {
 }
 
 .logo a {
-  color: #85cdca;
+  color: #f4ff61;
   font-size: 30px;
   text-transform: uppercase;
   font-weight: 500;
@@ -124,7 +124,7 @@ nav {
 }
 
 nav ul li a {
-  color: #85cdca;
+  color: #f4ff61;
   text-transform: uppercase;
 
 
@@ -137,7 +137,7 @@ nav ul li a:before {
 }
 
 nav ul li a:hover {
-  color: #555;
+  color: #17242a;
 }
 
 
@@ -157,8 +157,8 @@ nav.fill ul li a:after {
   width: 0%;
   content: '.';
   color: transparent;
-  background: #aaa;
-  height: 1px;
+  background: #17242a;
+  height: 2px;
 }
 
 nav.stroke ul li a:hover:after {
