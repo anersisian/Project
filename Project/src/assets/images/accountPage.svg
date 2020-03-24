@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#32ff6a"/>
+      <stop offset="1" stop-color="#27aa80"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f4ff61"/>
+      <stop offset="1" stop-color="#a8ff3e"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-4" y1="1" y2="0" xlink:href="#linear-gradient-2"/>
+    <linearGradient id="linear-gradient-6" y1="0.181" xlink:href="#linear-gradient-2"/>
+    <clipPath id="clip-Web_1920_1">
+      <rect width="1920" height="1080"/>
+    </clipPath>
+  </defs>
+  <g id="Web_1920_1" data-name="Web 1920 – 1" clip-path="url(#clip-Web_1920_1)">
+    <rect width="1920" height="1080" fill="rgba(140,186,81,0)"/>
+    <g id="Group_25" data-name="Group 25">
+      <rect id="Rectangle_554" data-name="Rectangle 554" width="55" height="1011" rx="27.5" transform="translate(1865 159)" opacity="0.625" fill="url(#linear-gradient)"/>
+      <rect id="Rectangle_555" data-name="Rectangle 555" width="55" height="1011" rx="27.5" transform="translate(1810 249)" opacity="0.625" fill="url(#linear-gradient-2)"/>
+      <rect id="Rectangle_556" data-name="Rectangle 556" width="55" height="1011" rx="27.5" transform="translate(1755 189)" opacity="0.625" fill="url(#linear-gradient)"/>
+      <path id="Union_2" data-name="Union 2" d="M0,1389.5v-956a27.5,27.5,0,1,1,55,0v956a27.5,27.5,0,1,1-55,0Zm55-406V27.5a27.5,27.5,0,1,1,55,0v956a27.5,27.5,0,1,1-55,0Z" transform="translate(1755 1706) rotate(180)" opacity="0.625" fill="url(#linear-gradient-4)"/>
+      <rect id="Rectangle_559" data-name="Rectangle 559" width="55" height="1011" rx="27.5" transform="translate(1590 734)" opacity="0.625" fill="url(#linear-gradient)"/>
+      <rect id="Rectangle_560" data-name="Rectangle 560" width="55" height="1011" rx="27.5" transform="translate(1535 755)" opacity="0.625" fill="url(#linear-gradient-6)"/>
+      <rect id="Rectangle_561" data-name="Rectangle 561" width="55" height="1011" rx="27.5" transform="translate(1480 695)" opacity="0.625" fill="url(#linear-gradient)"/>
+      <rect id="Rectangle_562" data-name="Rectangle 562" width="55" height="1011" rx="27.5" transform="translate(1425 734)" opacity="0.625" fill="url(#linear-gradient-2)"/>
+      <rect id="Rectangle_563" data-name="Rectangle 563" width="55" height="1011" rx="27.5" transform="translate(1370 827)" opacity="0.625" fill="url(#linear-gradient)"/>
+      <rect id="Rectangle_564" data-name="Rectangle 564" width="55" height="1011" rx="27.5" transform="translate(1315 778)" opacity="0.625" fill="url(#linear-gradient-2)"/>
+      <rect id="Rectangle_565" data-name="Rectangle 565" width="55" height="1011" rx="27.5" transform="translate(1260 734)" opacity="0.625" fill="url(#linear-gradient-2)"/>
+      <rect id="Rectangle_566" data-name="Rectangle 566" width="55" height="1011" rx="27.5" transform="translate(1150 734)" opacity="0.625" fill="url(#linear-gradient-2)"/>
+      <rect id="Rectangle_567" data-name="Rectangle 567" width="55" height="1011" rx="27.5" transform="translate(1205 755)" opacity="0.625" fill="url(#linear-gradient)"/>
+      <rect id="Rectangle_568" data-name="Rectangle 568" width="55" height="1011" rx="27.5" transform="translate(1095 695)" opacity="0.625" fill="url(#linear-gradient)"/>
+      <rect id="Rectangle_569" data-name="Rectangle 569" width="55" height="1011" rx="27.5" transform="translate(1040 734)" opacity="0.625" fill="url(#linear-gradient-2)"/>
+      <rect id="Rectangle_570" data-name="Rectangle 570" width="55" height="1011" rx="27.5" transform="translate(985 695)" opacity="0.625" fill="url(#linear-gradient-2)"/>
+      <rect id="Rectangle_571" data-name="Rectangle 571" width="55" height="1011" rx="27.5" transform="translate(932 734)" opacity="0.625" fill="url(#linear-gradient)"/>
+      <rect id="Rectangle_572" data-name="Rectangle 572" width="55" height="1011" rx="27.5" transform="translate(877 695)" opacity="0.625" fill="url(#linear-gradient-2)"/>
+      <rect id="Rectangle_573" data-name="Rectangle 573" width="55" height="1011" rx="27.5" transform="translate(822 778)" opacity="0.625" fill="url(#linear-gradient)"/>
+      <rect id="Rectangle_574" data-name="Rectangle 574" width="55" height="1011" rx="27.5" transform="translate(767 847)" opacity="0.625" fill="url(#linear-gradient-2)"/>
+      <rect id="Rectangle_575" data-name="Rectangle 575" width="55" height="1011" rx="27.5" transform="translate(712 795)" opacity="0.625" fill="url(#linear-gradient-2)"/>
+      <rect id="Rectangle_576" data-name="Rectangle 576" width="55" height="1011" rx="27.5" transform="translate(657 755)" opacity="0.625" fill="url(#linear-gradient)"/>
+      <rect id="Rectangle_577" data-name="Rectangle 577" width="55" height="1011" rx="27.5" transform="translate(602 695)" opacity="0.625" fill="url(#linear-gradient-2)"/>
+      <rect id="Rectangle_578" data-name="Rectangle 578" width="55" height="1011" rx="27.5" transform="translate(547 734)" opacity="0.625" fill="url(#linear-gradient)"/>
+      <rect id="Rectangle_579" data-name="Rectangle 579" width="55" height="1011" rx="27.5" transform="translate(492 755)" opacity="0.625" fill="url(#linear-gradient-2)"/>
+      <rect id="Rectangle_580" data-name="Rectangle 580" width="55" height="1011" rx="27.5" transform="translate(437 734)" opacity="0.625" fill="url(#linear-gradient-2)"/>
+      <rect id="Rectangle_581" data-name="Rectangle 581" width="55" height="1011" rx="27.5" transform="translate(382 755)" opacity="0.625" fill="url(#linear-gradient)"/>
+      <rect id="Rectangle_582" data-name="Rectangle 582" width="55" height="1011" rx="27.5" transform="translate(327 734)" opacity="0.625" fill="url(#linear-gradient-2)"/>
+      <rect id="Rectangle_584" data-name="Rectangle 584" width="55" height="1011" rx="27.5" transform="translate(217 755)" opacity="0.625" fill="url(#linear-gradient-2)"/>
+      <rect id="Rectangle_583" data-name="Rectangle 583" width="55" height="1011" rx="27.5" transform="translate(272 699)" opacity="0.625" fill="url(#linear-gradient)"/>
+      <rect id="Rectangle_588" data-name="Rectangle 588" width="55" height="1011" rx="27.5" transform="translate(0 119)" opacity="0.625" fill="url(#linear-gradient-2)"/>
+      <rect id="Rectangle_587" data-name="Rectangle 587" width="55" height="1011" rx="27.5" transform="translate(54 209)" opacity="0.625" fill="url(#linear-gradient)"/>
+      <rect id="Rectangle_585" data-name="Rectangle 585" width="55" height="1011" rx="27.5" transform="translate(108 149)" opacity="0.625" fill="url(#linear-gradient)"/>
+      <rect id="Rectangle_586" data-name="Rectangle 586" width="55" height="1011" rx="27.5" transform="translate(162 249)" opacity="0.625" fill="url(#linear-gradient-2)"/>
+      <rect id="Rectangle_519" data-name="Rectangle 519" width="55" height="1011" rx="27.5" transform="translate(0 168)" fill="url(#linear-gradient)"/>
+      <rect id="Rectangle_520" data-name="Rectangle 520" width="55" height="1011" rx="27.5" transform="translate(55 258)" fill="url(#linear-gradient-2)"/>
+      <rect id="Rectangle_521" data-name="Rectangle 521" width="55" height="1011" rx="27.5" transform="translate(110 198)" fill="url(#linear-gradient)"/>
+      <path id="Union_1" data-name="Union 1" d="M460,2083.5v-956a27.5,27.5,0,1,1,55,0v956a27.5,27.5,0,0,1-55,0Zm-55-406v-956a27.5,27.5,0,1,1,55,0v956a27.5,27.5,0,0,1-55,0Z" transform="translate(-240 -396)" fill="url(#linear-gradient-2)"/>
+      <rect id="Rectangle_524" data-name="Rectangle 524" width="55" height="1011" rx="27.5" transform="translate(275 743)" fill="url(#linear-gradient)"/>
+      <rect id="Rectangle_525" data-name="Rectangle 525" width="55" height="1011" rx="27.5" transform="translate(330 764)" fill="url(#linear-gradient-6)"/>
+      <rect id="Rectangle_526" data-name="Rectangle 526" width="55" height="1011" rx="27.5" transform="translate(385 704)" fill="url(#linear-gradient)"/>
+      <rect id="Rectangle_527" data-name="Rectangle 527" width="55" height="1011" rx="27.5" transform="translate(440 743)" fill="url(#linear-gradient-2)"/>
+      <rect id="Rectangle_528" data-name="Rectangle 528" width="55" height="1011" rx="27.5" transform="translate(495 836)" fill="url(#linear-gradient)"/>
+      <rect id="Rectangle_529" data-name="Rectangle 529" width="55" height="1011" rx="27.5" transform="translate(550 787)" fill="url(#linear-gradient-2)"/>
+      <rect id="Rectangle_530" data-name="Rectangle 530" width="55" height="1011" rx="27.5" transform="translate(605 743)" fill="url(#linear-gradient-2)"/>
+      <rect id="Rectangle_532" data-name="Rectangle 532" width="55" height="1011" rx="27.5" transform="translate(715 743)" fill="url(#linear-gradient-2)"/>
+      <rect id="Rectangle_531" data-name="Rectangle 531" width="55" height="1011" rx="27.5" transform="translate(660 764)" fill="url(#linear-gradient)"/>
+      <rect id="Rectangle_533" data-name="Rectangle 533" width="55" height="1011" rx="27.5" transform="translate(770 704)" fill="url(#linear-gradient)"/>
+      <rect id="Rectangle_534" data-name="Rectangle 534" width="55" height="1011" rx="27.5" transform="translate(825 743)" fill="url(#linear-gradient-2)"/>
+      <rect id="Rectangle_535" data-name="Rectangle 535" width="55" height="1011" rx="27.5" transform="translate(880 704)" fill="url(#linear-gradient-2)"/>
+      <rect id="Rectangle_536" data-name="Rectangle 536" width="55" height="1011" rx="27.5" transform="translate(933 743)" fill="url(#linear-gradient)"/>
+      <rect id="Rectangle_537" data-name="Rectangle 537" width="55" height="1011" rx="27.5" transform="translate(988 704)" fill="url(#linear-gradient-2)"/>
+      <rect id="Rectangle_538" data-name="Rectangle 538" width="55" height="1011" rx="27.5" transform="translate(1043 787)" fill="url(#linear-gradient)"/>
+      <rect id="Rectangle_539" data-name="Rectangle 539" width="55" height="1011" rx="27.5" transform="translate(1098 856)" fill="url(#linear-gradient-2)"/>
+      <rect id="Rectangle_540" data-name="Rectangle 540" width="55" height="1011" rx="27.5" transform="translate(1153 804)" fill="url(#linear-gradient-2)"/>
+      <rect id="Rectangle_541" data-name="Rectangle 541" width="55" height="1011" rx="27.5" transform="translate(1208 764)" fill="url(#linear-gradient)"/>
+      <rect id="Rectangle_542" data-name="Rectangle 542" width="55" height="1011" rx="27.5" transform="translate(1263 704)" fill="url(#linear-gradient-2)"/>
+      <rect id="Rectangle_543" data-name="Rectangle 543" width="55" height="1011" rx="27.5" transform="translate(1318 743)" fill="url(#linear-gradient)"/>
+      <rect id="Rectangle_544" data-name="Rectangle 544" width="55" height="1011" rx="27.5" transform="translate(1373 764)" fill="url(#linear-gradient-2)"/>
+      <rect id="Rectangle_545" data-name="Rectangle 545" width="55" height="1011" rx="27.5" transform="translate(1428 743)" fill="url(#linear-gradient-2)"/>
+      <rect id="Rectangle_546" data-name="Rectangle 546" width="55" height="1011" rx="27.5" transform="translate(1483 764)" fill="url(#linear-gradient)"/>
+      <rect id="Rectangle_547" data-name="Rectangle 547" width="55" height="1011" rx="27.5" transform="translate(1538 743)" fill="url(#linear-gradient-2)"/>
+      <rect id="Rectangle_549" data-name="Rectangle 549" width="55" height="1011" rx="27.5" transform="translate(1648 764)" fill="url(#linear-gradient-2)"/>
+      <rect id="Rectangle_548" data-name="Rectangle 548" width="55" height="1011" rx="27.5" transform="translate(1593 708)" fill="url(#linear-gradient)"/>
+      <rect id="Rectangle_550" data-name="Rectangle 550" width="55" height="1011" rx="27.5" transform="translate(1865 128)" fill="url(#linear-gradient-2)"/>
+      <rect id="Rectangle_551" data-name="Rectangle 551" width="55" height="1011" rx="27.5" transform="translate(1811 218)" fill="url(#linear-gradient)"/>
+      <rect id="Rectangle_552" data-name="Rectangle 552" width="55" height="1011" rx="27.5" transform="translate(1757 158)" fill="url(#linear-gradient)"/>
+      <rect id="Rectangle_553" data-name="Rectangle 553" width="55" height="1011" rx="27.5" transform="translate(1703 258)" fill="url(#linear-gradient-2)"/>
+    </g>
+  </g>
+</svg>
