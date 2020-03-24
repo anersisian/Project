@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.481" y1="0.993" x2="0.485" y2="-0.001" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#a8ff3e"/>
+      <stop offset="1" stop-color="#27aa80"/>
+    </linearGradient>
+    <clipPath id="clip-Web_1920_1">
+      <rect width="1920" height="1080"/>
+    </clipPath>
+  </defs>
+  <g id="Web_1920_1" data-name="Web 1920 – 1" clip-path="url(#clip-Web_1920_1)">
+    <rect width="1920" height="1080" fill="rgba(140,186,81,0)"/>
+    <g id="Group_1" data-name="Group 1" transform="translate(-96)">
+      <path id="Rectangle_2" data-name="Rectangle 2" d="M418.5,0h0A418.5,418.5,0,0,1,837,418.5V1319a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V418.5A418.5,418.5,0,0,1,418.5,0Z" transform="translate(1753.663 1147.784) rotate(-158)" fill="#f4ff61" opacity="0.28"/>
+      <path id="Union_1" data-name="Union 1" d="M352.515,1947.951a348.67,348.67,0,0,1-182.39-168.888H18.5a7.5,7.5,0,1,1,0-15H163.12a351.89,351.89,0,0,1-19.134-56H76.5a12.5,12.5,0,1,1,0-25h62.194a348.381,348.381,0,0,1,20.418-190.739l103.133-255.262H178.5a7.5,7.5,0,1,1,0-15h89.8l11.717-29H128.5a12.5,12.5,0,1,1,0-25H290.122L476.4,707l649.029,262.224L808.141,1754.549a349.265,349.265,0,0,1-64.678,103.514H859.5a12.5,12.5,0,1,1,0,25H718.461a349.622,349.622,0,0,1-365.946,64.887Z" transform="translate(1042 -1011.064)" fill="url(#linear-gradient)"/>
+    </g>
+  </g>
+</svg>

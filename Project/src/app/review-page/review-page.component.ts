@@ -78,6 +78,7 @@ submit(comment: String, value) : void {
         res => {
           this.sub = true;
           console.log("subscription created");
+          this.router.navigate(["/account-page/", this.m.user.userName]);
         },
         err => {
           if(this.sub === false)

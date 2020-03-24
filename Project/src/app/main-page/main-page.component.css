@@ -195,8 +195,12 @@ section {
   height: 100vh;
 }
 
+.main{
+  background-color: #17242a;
+}
+
 .firstSection {
-  background: url(../../assets/images/mainImage.jpg) no-repeat center;
+  background: url(../../assets/images/mianPage.svg) no-repeat center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -205,12 +209,20 @@ section {
 
 .introduction {
   position: absolute;
-  top: 40%;
-  left: 45%;
+  top: 25%;
+  left: 5%;
+}
+
+.introduction h2{
+  font-size: 4rem;
+  color: #f4ff61;
+  /* text-transform: uppercase; */
+  letter-spacing: 5px;
+  margin: 3% 55% 0px 0px;
 }
 
 .intro-text h1 {
-  font-size: 60px;
+  font-size: 4em;
   font-weight: 800;
   color: #cacaca;
   text-transform: uppercase;
