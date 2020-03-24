@@ -9,7 +9,8 @@
   <app-subscriptions></app-subscriptions>
 </div> -->
 
-<main class="main">
+<main [ngStyle]="{'background-color': whichMode ? '#fbf9fa' : '#17242a'}" class="main">
+
   <section class="firstSection">
     <div class="navB">
       <app-nav-bar></app-nav-bar>
@@ -17,8 +18,8 @@
 
     <div class="introduction">
       <div class="intro-text">
-        <h1>Future is now</h1>
-        <h2>A modern way to shop for groceries</h2>
+        <h1 [ngStyle]="{'color': whichMode ? '#17242a' : '#f4ff61'}">Future is now</h1>
+        <h2 [ngStyle]="{'color': whichMode ? '#424a4e' : '#dbe08b'}">A modern way to shop for groceries</h2>
       </div>
     </div>
   </section>
