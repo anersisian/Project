@@ -13,22 +13,22 @@
         <div class="form-group">
           <input type="text" class="form-control fadeIn second" id="userName" name="userName"
             [(ngModel)]="credentials.userName" minlength="7" maxlength="30" #userName="ngModel"
-            placeholder="Enter Email" required autofocus>
+            placeholder="{{'i18n.enter' | translate}} Email" required autofocus>
           <span class="help-block" class="text-danger" *ngIf='userName.errors?.required && userName.touched'>
-            ***Please Enter Your Email</span>
+            ***{{'i18n.enter-email' | translate}}</span>
           <span class="help-block" class="text-danger" *ngIf='userName.errors && userName.errors.email'>
-            ***Incorrect Email</span>
+            ***{{'i18n.incorrect-email' | translate}}</span>
         </div>
         <div class="form-group">
           <input type="password" class="form-control fadeIn third" id="password" name="password"
-            [(ngModel)]="credentials.password" minlength="6" #password="ngModel" placeholder="Enter Password" required
+            [(ngModel)]="credentials.password" minlength="6" #password="ngModel" placeholder="{{'i18n.enter' | translate}} {{'i18n.password' | translate}}" required
             autofocus>
           <span class="help-block" class="text-danger" *ngIf='password.errors?.required && password.touched'>
-            ***Please Enter Your Password</span>
+            ***{{'i18n.enter' | translate}} {{'i18n.password' | translate}}</span>
         </div>
-        <input type="submit" class="fadeIn fourth" value="Log In" [disabled]="!form.form.valid" />
+        <input type="submit" class="fadeIn fourth" value="{{'i18n.login' | translate}}" [disabled]="!form.form.valid" />
         <span *ngIf='loginError.length>0' class="text-danger">{{ loginError }}</span>
-        <a class="btn back btn-default fadeIn fourth" routerLink='/home'>Back to home</a>
+        <a class="btn back btn-default fadeIn fourth" routerLink='/home'>{{'i18n.back-home' | translate}}</a>
         <!-- <a <a class="btn btn-default" routerLink='/home'>Back to home</a> -->
 
       </form>

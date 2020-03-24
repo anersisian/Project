@@ -4,12 +4,12 @@
   <div class="container ">
     <div class="row">
       <div class="col">
-        <h1  *ngIf="user.isAdmin; else adminButton" class="text-center">Hello {{ user.firstName }} 
-          <button style="margin-right: 1em;" routerLink="/profile/{{user.userName}}" class="btn btn-outline-success">Your Profile</button>
-           <button routerLink="/admin/{{user.userName}}" class="btn btn-outline-warning">Admin Page</button></h1>
+        <h1  *ngIf="user.isAdmin; else adminButton" class="text-center">{{'i18n.hello' | translate }} {{ user.firstName }} 
+          <button style="margin-right: 1em;" routerLink="/profile/{{user.userName}}" class="btn btn-outline-success">{{'i18n.profile' | translate}}</button>
+           <button routerLink="/admin/{{user.userName}}" class="btn btn-outline-warning">{{'i18n.admin-pg' | translate }}</button></h1>
         <ng-template #adminButton>
-          <h1 class="text-center">Hello {{ user.firstName }}
-             <button routerLink="/profile/{{user.userName}}" class="btn btn-outline-success">Your Profile</button></h1>
+          <h1 class="text-center">{{'i18n.hello' | translate }} {{ user.firstName }}
+             <button routerLink="/profile/{{user.userName}}" class="btn btn-outline-success">{{'i18n.profile' | translate}}</button></h1>
         </ng-template>
       </div>
     </div>
@@ -18,38 +18,38 @@
     &nbsp;
     <div class="row ">
       <div class="col-md-7" *ngFor="let u of user.subscriptionInfo"> 
-        <h4>Your next delivery date is: {{u.date}} 
-           <button style="margin-left: 1em;" routerLink="/view-subscription/{{u._id}}" class="btn btn-outline-success">View Subscription</button>
+        <h4>{{'i18n.delivery-date' | translate }} {{u.date}} 
+           <button style="margin-left: 1em;" routerLink="/view-subscription/{{u._id}}" class="btn btn-outline-success">{{'i18n.view-sub' | translate}}</button>
           
           </h4>
           
       </div>
 
       <div class="col-md-2">
-        <p>Skip for: </p>          
+        <p>{{'i18n.skip' | translate}} </p>          
       </div>
 
  
 
       <div class="col-md-2">
         <select class="form-control form-control-sm" (change)="selectOption($event.target.value)" [(ngModel)]="selected">
-          <option [value]="1">1 week</option>
-          <option [value]="2">2 weeks</option>
-          <option [value]="3">1 month</option>
+          <option [value]="1">1 {{'i18n.week' | translate}}</option>
+          <option [value]="2">2 {{'i18n.week' | translate}}s</option>
+          <option [value]="3">1 {{'i18n.month' | translate}}</option>
         </select>
       </div>
 
 
       
       <div class="col-md-1">
-        <button class="btn btn-outline-success" (click)="pause()">Apply</button>
+        <button class="btn btn-outline-success" (click)="pause()">{{'i18n.apply' | translate}}</button>
       </div>
     </div>
 
     &nbsp;
     <div class="row">
       <div class="col">
-        <h4>Your past deliveries</h4>
+        <h4>{{'i18n.past' | translate}}</h4>
       </div>
     </div>
 
@@ -57,15 +57,15 @@
       <tr *ngFor="let u of user.pastDeliveries">
         <td>{{ u.subName }}</td>
         <td>{{u.date}}</td>
-        <td><button style="margin: .5em;" routerLink="/view-subscription/{{u._id}}" class="btn btn-outline-success">View Subscription</button></td>
-        <td><button style="margin: .5em;" routerLink="/review/{{user.userName}}" class="btn btn-outline-success">Leave a review</button></td>
+        <td><button style="margin: .5em;" routerLink="/view-subscription/{{u._id}}" class="btn btn-outline-success">{{'i18n.view-sub' | translate}}</button></td>
+        <td><button style="margin: .5em;" routerLink="/review/{{user.userName}}" class="btn btn-outline-success">{{'i18n.review' | translate}}</button></td>
       </tr>
     </table>
 
     &nbsp;
     <div class="row">
       <div class="col">
-        <h4 [hidden]="!reviews">Your Reviews</h4>
+        <h4 [hidden]="!reviews">{{'i18n.your-reviews' | translate}}</h4>
       </div>
     </div>
 

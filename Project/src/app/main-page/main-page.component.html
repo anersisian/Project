@@ -18,8 +18,10 @@
 
     <div class="introduction">
       <div class="intro-text">
-        <h1 [ngStyle]="{'color': whichMode ? '#17242a' : '#f4ff61'}">Future is now</h1>
-        <h2 [ngStyle]="{'color': whichMode ? '#424a4e' : '#dbe08b'}">A modern way to shop for groceries</h2>
+
+        <h1 [ngStyle]="{'color': whichMode ? '#17242a' : '#f4ff61'}">{{ 'i18n.future' | translate }}</h1>
+        <h2 [ngStyle]="{'color': whichMode ? '#424a4e' : '#dbe08b'}">{{ 'i18n.desc' | translate }}</h2>
+
       </div>
     </div>
   </section>

@@ -10,26 +10,28 @@
   <nav class="stroke">
     <ul class="nav-links">
       <li *ngIf="isLogged">
+
         <a class="nav-link" routerLink="/account-page/{{ userProfile }}" routerLinkActive="active"><span
-            [ngStyle]="{'color': whichMode ? '#17242a' : '#f4ff61'}">Account</span></a>
+            [ngStyle]="{'color': whichMode ? '#17242a' : '#f4ff61'}">{{'i18n.acc' | translate}}</span></a>
       </li>
       <li *ngIf="!isLogged">
         <a class="nav-link" routerLink="/login" routerLinkActive="active"><span
-            [ngStyle]="{'color': whichMode ? '#17242a' : '#f4ff61'}">LogIn</span></a>
+            [ngStyle]="{'color': whichMode ? '#17242a' : '#f4ff61'}">{{'i18n.login' | translate}}</span></a>
       </li>
       <li *ngIf="isLogged">
         <a class="nav-link" routerLink="/logout" routerLinkActive="active"><span
-            [ngStyle]="{'color': whichMode ? '#17242a' : '#f4ff61'}">LogOut</span></a>
+            [ngStyle]="{'color': whichMode ? '#17242a' : '#f4ff61'}">{{'i18n.logout' | translate}}</span></a>
       </li>
       <li>
         <a class="nav-link" routerLink="/register" routerLinkActive="active"><span
-            [ngStyle]="{'color': whichMode ? '#17242a' : '#f4ff61'}">Register</span></a>
+            [ngStyle]="{'color': whichMode ? '#17242a' : '#f4ff61'}">{{'i18n.reg' | translate}}</span></a>
       </li>
 
       <li>
 
         <input class="nav-link toggle" type="checkbox" id="switch" name="theme" [(ngModel)]="isChecked"
           (change)="change()" /><label for="switch">Toggle</label>
+
       </li>
     </ul>
   </nav>

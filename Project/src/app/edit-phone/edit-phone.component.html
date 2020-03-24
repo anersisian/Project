@@ -7,7 +7,7 @@
   <div class="row">
     <div class="col">
       <div class="text-left">
-        <div class="h1">Phone Number</div>
+        <div class="h1">{{'i18n.phone' | translate}}</div>
         <hr>
       </div>
     </div>
@@ -15,7 +15,7 @@
   <div class="row"  *ngFor="let u of [user]">
     <div class="col-md">
       <p>
-        Your current phone number: {{u.phoneNumber}}
+        {{'i18n.current' | translate}}: {{u.phoneNumber}}
       </p>
     </div>
     </div>
@@ -24,14 +24,14 @@
 
         <form (ngSubmit)="onSubmit()" #form="ngForm">
           <div class="form-group">
-            <label class="control-label fadeIn third" for="phoneNumber">Enter new number: </label>
+            <label class="control-label fadeIn third" for="phoneNumber">{{'i18n.enter' | translate}} {{'i18n.new' | translate}} {{'i18n.phone' | translate}}: </label>
             <input input type="text" class="form-control fadeIn third" id="phoneNumber" name="phoneNumber"
               [(ngModel)]="user.phoneNumber" required minlength="5" maxlength="10" #phoneNumber="ngModel" autofocus
               placeholder="new number" />
 
           </div>
           
-          <button type="submit" class=" btn btn-outline-success btn-lg">Submit</button>
+          <button type="submit" class=" btn btn-outline-success btn-lg">{{'i18n.submit' | translate}}</button>
         </form>
       </div>
     </div>

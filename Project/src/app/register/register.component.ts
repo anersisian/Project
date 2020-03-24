@@ -63,6 +63,27 @@ export class RegisterComponent implements OnInit {
       }
     );
   }
+  
+
+    // sendEmail("http://localhost:3000/sendmail", user).subscribe(
+  //   data => {
+  //     let res:any = data; 
+  //     console.log(
+  //       `${user.name} Has successfully registered!`
+  //     );
+  //     }
+
+  sendEmail(userName: string): Observable<Credentials> {
+    return this.http.post<any>(
+      `${this.url}/api/sendmail`, userName
+    );
+  }
+
+    // //Users Get One
+    // usersGetByUsername(userName: string): Observable<User> {
+    //   return this.http.get<User>(`${this.url}/api/users/${userName}`);
+    // }
+
 
   create(credentials: Credentials): Observable<any> {
     return this.http.post<any>(
