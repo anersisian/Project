@@ -1,51 +1,57 @@
-<main>
+<main [ngStyle]="{'background-color': whichMode ? '#FBF9FA' : '#17242a', 'color': whichMode ? '#17242a':'#FBF9FA' }">
   <app-nav-bar></app-nav-bar>
   <div class="container ">
     <div class="row">
       <div class="col">
-        <h1  *ngIf="user.isAdmin; else adminButton" class="text-center">{{'i18n.hello' | translate }} {{ user.firstName }} 
-          <button style="margin-right: 1em;" routerLink="/profile/{{user.userName}}" class="btn btn-outline-success">{{'i18n.profile' | translate}}</button>
-           <button routerLink="/admin/{{user.userName}}" class="btn btn-outline-warning">{{'i18n.admin-pg' | translate }}</button></h1>
-           <ng-template #adminButton>
-           <h1 class="text-center">{{'i18n.hello' | translate }} {{ user.firstName }}
-             <button routerLink="/profile/{{user.userName}}" class="btn btn-outline-success">{{'i18n.profile' | translate}}</button></h1>
+        <h1 *ngIf="user.isAdmin; else adminButton" class="text-center h1">{{'i18n.hello' | translate }}
+          {{ user.firstName }}
+          <button style="margin-right: 1em;" routerLink="/profile/{{user.userName}}"
+            class="btn btn-outline-success">{{'i18n.profile' | translate}}</button>
+          <button routerLink="/admin/{{user.userName}}"
+            class="btn btn-outline-warning">{{'i18n.admin-pg' | translate }}</button></h1>
+        <ng-template #adminButton>
+          <h1 class="text-center">{{'i18n.hello' | translate }} {{ user.firstName }}
+            <button routerLink="/profile/{{user.userName}}"
+              class="btn btn-outline-success">{{'i18n.profile' | translate}}</button></h1>
         </ng-template>
-        <div class="col-md-12 text-center" *ngFor="let u of user.subscriptionInfo"> 
-          <h4>{{'i18n.delivery-date' | translate }} {{u.date}} 
-             <button style="margin-left: 1em;" routerLink="/view-subscription/{{u._id}}" class="btn btn-outline-success">{{'i18n.view-sub' | translate}}</button>
-            
-            </h4>
-            <div class="row text-center">
+        <div class="col-md-12 text-center" *ngFor="let u of user.subscriptionInfo">
+          <h4>{{'i18n.delivery-date' | translate }} {{u.date}}
+            <button style="margin-left: 1em;" routerLink="/view-subscription/{{u._id}}"
+              class="btn btn-outline-success">{{'i18n.view-sub' | translate}}</button>
 
-              <div class="col-md-2 offset-md-2">
-                <p>{{'i18n.skip' | translate}} </p>          
-              </div>
-        
-         
-        
-              <div class="col-md-4">
-                <select class="form-control form-control-sm" (change)="selectOption($event.target.value)" [(ngModel)]="selected">
-                  <option [value]="1">1 {{'i18n.week' | translate}}</option>
-                  <option [value]="2">2 {{'i18n.week' | translate}}s</option>
-                  <option [value]="3">1 {{'i18n.month' | translate}}</option>
-                </select>
-              </div>
-        
-        
-              
-              <div class="col-md-1">
-                <button class="btn btn-outline-success" (click)="pause()">{{'i18n.apply' | translate}}</button>
-              </div>
+          </h4>
+          <div class="row text-center">
+
+            <div class="col-md-2 offset-md-2">
+              <p>{{'i18n.skip' | translate}} </p>
             </div>
-            
+
+
+
+            <div class="col-md-4">
+              <select class="form-control form-control-sm" (change)="selectOption($event.target.value)"
+                [(ngModel)]="selected">
+                <option [value]="1">1 {{'i18n.week' | translate}}</option>
+                <option [value]="2">2 {{'i18n.week' | translate}}s</option>
+                <option [value]="3">1 {{'i18n.month' | translate}}</option>
+              </select>
+            </div>
+
+
+
+            <div class="col-md-1">
+              <button class="btn btn-outline-success" (click)="pause()">{{'i18n.apply' | translate}}</button>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
-    <hr style="background-color: #f4ff61;">
+    <hr [ngStyle]="{'border-top': whichMode ? '0.99px solid #17242a' : '0.99px solid #f4ff61'}">
     &nbsp;
     <div class="row">
       <div class="col">
-        <h4 style="color: #f4ff61;">{{'i18n.past' | translate}}</h4>
+        <h4 [ngStyle]="{'color': whichMode ? '#17242a':'#f4ff61' }">{{'i18n.past' | translate}}</h4>
         &nbsp;
       </div>
     </div>
@@ -54,15 +60,18 @@
       <tr *ngFor="let u of user.pastDeliveries">
         <td>{{ u.subName }}</td>
         <td>{{u.date}}</td>
-        <td><button style="margin: .5em;" routerLink="/view-subscription/{{u._id}}" class="btn btn-outline-success">{{'i18n.view-sub' | translate}}</button></td>
-        <td><button style="margin: .5em;" routerLink="/review/{{user.userName}}" class="btn btn-outline-success">{{'i18n.review' | translate}}</button></td>
+        <td><button style="margin: .5em;" routerLink="/view-subscription/{{u._id}}"
+            class="btn btn-outline-success">{{'i18n.view-sub' | translate}}</button></td>
+        <td><button style="margin: .5em;" routerLink="/review/{{user.userName}}"
+            class="btn btn-outline-success">{{'i18n.review' | translate}}</button></td>
       </tr>
     </table>
 
     &nbsp;
     <div class="row">
       <div class="col">
-        <h4 style="color: #f4ff61;" [hidden]="!reviews">{{'i18n.your-reviews' | translate}}</h4>
+        <h4 [ngStyle]="{'color': whichMode ? '#17242a':'#f4ff61' }" [hidden]="!reviews">
+          {{'i18n.your-reviews' | translate}}</h4>
       </div>
     </div>
 
