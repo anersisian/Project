@@ -1,11 +1,12 @@
-<div id="secondPage">
+<div [ngStyle]="{'background-color': whichMode ? '#FBF9FA' : '#17242a'}" id="secondPage">
+  <app-nav-bar></app-nav-bar>
   <div class="wrapper fadeInDown">
-    <div id="formContent">
+    <div [ngStyle]="{'background-color': whichMode ? '#F3F3F3' : '#17242a'}" id="formContent">
       <!-- Tabs Titles -->
 
       <!-- Icon -->
       <div id="id" class="fadeIn first">
-        <i class="material-icons">perm_identity </i>
+        <i [ngStyle]="{'color': whichMode ? '#17242a' : '#f4ff61'}" class="material-icons">perm_identity </i>
       </div>
 
       <!-- Login Form -->
@@ -21,15 +22,16 @@
         </div>
         <div class="form-group">
           <input type="password" class="form-control fadeIn third" id="password" name="password"
-            [(ngModel)]="credentials.password" minlength="6" #password="ngModel" placeholder="{{'i18n.enter' | translate}} {{'i18n.password' | translate}}" required
-            autofocus>
+            [(ngModel)]="credentials.password" minlength="6" #password="ngModel"
+            placeholder="{{'i18n.enter' | translate}} {{'i18n.password' | translate}}" required autofocus>
           <span class="help-block" class="text-danger" *ngIf='password.errors?.required && password.touched'>
             ***{{'i18n.enter' | translate}} {{'i18n.password' | translate}}</span>
         </div>
         <input type="submit" class="fadeIn fourth" value="{{'i18n.login' | translate}}" [disabled]="!form.form.valid" />
         <span *ngIf='loginError.length>0' class="text-danger">{{ loginError }}</span>
-        <a class="btn back btn-default fadeIn fourth" routerLink='/home'>{{'i18n.back-home' | translate}}</a>
-        <!-- <a <a class="btn btn-default" routerLink='/home'>Back to home</a> -->
+        <a [ngStyle]="{'background-color': whichMode ? '#F3F3F3' : '#17242a', 'border-color': whichMode ? '#17242a' : '#F3F3F3'}"
+          class="btn back btn-default fadeIn fourth" routerLink='/home'><span
+            [ngStyle]="{'color': whichMode ? '#17242a' : '#d1d1d1'}">{{'i18n.back-home' | translate}}</span></a>
 
       </form>
 

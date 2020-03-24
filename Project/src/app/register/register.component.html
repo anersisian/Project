@@ -1,21 +1,24 @@
-<div id="secondPage">
+<div [ngStyle]="{'background-color': whichMode ? '#FBF9FA' : '#17242a'}" id="secondPage">
   <app-nav-bar></app-nav-bar>
   <div class="wrapper ">
-    <div id="formContent">
+    <div [ngStyle]="{'background-color': whichMode ? '#F3F3F3' : '#17242a'}" id="formContent">
       <!-- Tabs Titles -->
 
       <!-- Icon -->
       <div id="id" class="">
-        <i class="material-icons">perm_identity </i>
+        <i [ngStyle]="{'color': whichMode ? '#17242a' : '#f4ff61'}" class="material-icons">perm_identity </i>
       </div>
-      <h4 class="text-center fadeIn third"><b>{{'i18n.create' | translate}} {{'i18n.acc' | translate}}</b></h4>
-
+      <h4 [ngStyle]="{'color': whichMode ? '#17242a' : '#f4ff61'}" class="text-center fadeIn third">
+        <b>{{'i18n.create' | translate}}
+          {{'i18n.acc' | translate}}</b></h4>
+      <hr [ngStyle]="{'border-top': whichMode ? '0.99px solid #17242a' : '0.99px solid #f4ff61'}" class="new1" />
       <!-- Login Form -->
-      <h4 class="fadeIn third">{{'i18n.info' | translate}}</h4>
+      <h4 [ngStyle]="{'color': whichMode ? '#17242a' : '#f4ff61'}" class="fadeIn third">{{'i18n.info' | translate}}</h4>
       <form (ngSubmit)='onSubmit()' #form='ngForm'>
         <div class="row form-group">
 
-          <label class="col-4 control-label fadeIn second" for="userName">{{'i18n.user-name' | translate}}: </label>
+          <label [ngStyle]="{'color': whichMode ? '#17242a' : '#f4ff61'}" class="col-4 control-label fadeIn second"
+            for="userName">{{'i18n.user-name' | translate}}: </label>
           <input input type="text" class="col-7 form-control fadeIn second" required id="userName" name="userName"
             [(ngModel)]="credentials.userName" minlength="7" maxlength="50" #userName="ngModel"
             placeholder="{{'i18n.enter' | translate}} Email" autofocus />
@@ -28,7 +31,8 @@
 
 
         <div class="row form-group">
-          <label class="col-4 control-label fadeIn third" for="firstName">{{'i18n.first-name' | translate}}:</label>
+          <label [ngStyle]="{'color': whichMode ? '#17242a' : '#f4ff61'}" class="col-4 control-label fadeIn third"
+            for="firstName">{{'i18n.first-name' | translate}}:</label>
           <input input type="text" class="col-7 form-control fadeIn third" id="firstName" name="firstName"
             [(ngModel)]="credentials.firstName" required minlength="5" maxlength="55" #firstName="ngModel" autofocus
             placeholder="{{'i18n.enter' | translate}} {{'i18n.first-name' | translate}}" />
@@ -41,7 +45,8 @@
 
 
         <div class="row form-group">
-          <label class="col-4 control-label fadeIn third" for="lastName">{{'i18n.last-name' | translate}}:</label>
+          <label [ngStyle]="{'color': whichMode ? '#17242a' : '#f4ff61'}" class="col-4 control-label fadeIn third"
+            for="lastName">{{'i18n.last-name' | translate}}:</label>
           <input input type="text" class="col-7 form-control fadeIn third" id="lastName" name="lastName"
             [(ngModel)]="credentials.lastName" required minlength="5" maxlength="55" #lastName="ngModel" autofocus
             placeholder="{{'i18n.enter' | translate}} {{'i18n.last-name' | translate}}" />
@@ -53,7 +58,8 @@
 
 
         <div class="row form-group">
-          <label class="col-4 control-label fadeIn fourth" for="password">{{'i18n.password' | translate}}:</label>
+          <label [ngStyle]="{'color': whichMode ? '#17242a' : '#f4ff61'}" class="col-4 control-label fadeIn fourth"
+            for="password">{{'i18n.password' | translate}}:</label>
           <input type="password" class="col-7 form-control fadeIn fourth" id="password" name="password"
             [(ngModel)]="credentials.password" minlength="6" maxlength="30" #password="ngModel"
             placeholder="{{'i18n.enter' | translate}} {{'i18n.password' | translate}}" required />
@@ -61,7 +67,8 @@
 
 
         <div class="row form-group">
-          <label class="col-4 control-label fadeIn fourth" for="passwordConfirm">
+          <label [ngStyle]="{'color': whichMode ? '#17242a' : '#f4ff61'}" class="col-4 control-label fadeIn fourth"
+            for="passwordConfirm">
             {{'i18n.confirm' | translate}} {{'i18n.password' | translate}}:</label>
           <input type="password" class="col-7 form-control fadeIn fourth" id="passwordConfirm" name="passwordConfirm"
             [(ngModel)]="credentials.passwordConfirm" minlength="6" maxlength="30" #passwordConfirm="ngModel"
@@ -69,28 +76,33 @@
         </div>
 
         <div class="row form-group">
-          <label class="col-4 control-label fadeIn third" for="phoneNumber">{{'i18n.phone' | translate}}</label>
+          <label [ngStyle]="{'color': whichMode ? '#17242a' : '#f4ff61'}" class="col-4 control-label fadeIn third"
+            for="phoneNumber">{{'i18n.phone' | translate}}</label>
           <input input type="text" class="col-7 form-control fadeIn third" id="phoneNumber" name="phoneNumber"
             [(ngModel)]="credentials.phoneNumber" required minlength="5" maxlength="55" #phoneNumber="ngModel" autofocus
             placeholder="416-999-9999" />
         </div>
 
-        <h4 class="fadeIn third">{{'i18n.add' | translate}}</h4>
+        <h4 [ngStyle]="{'color': whichMode ? '#17242a' : '#f4ff61'}" class="fadeIn third">{{'i18n.add' | translate}}
+        </h4>
         <div class="row form-group">
-          <label class="col-4 control-label fadeIn third" for="streetNumber">{{'i18n.street-num' | translate}}:</label>
+          <label [ngStyle]="{'color': whichMode ? '#17242a' : '#f4ff61'}" class="col-4 control-label fadeIn third"
+            for="streetNumber">{{'i18n.street-num' | translate}}:</label>
           <input input type="number" min="0" class="col-7 form-control fadeIn third" id="streetNumber"
             name="streetNumber" [(ngModel)]="credentials.streetNumber" required minlength="5" maxlength="55"
             #streetNumber="ngModel" autofocus placeholder="{{'i18n.street-num' | translate}}" />
         </div>
 
         <div class="row form-group">
-          <label class="col-4 control-label fadeIn third" for="streetName">{{'i18n.street-name' | translate}}:</label>
+          <label [ngStyle]="{'color': whichMode ? '#17242a' : '#f4ff61'}" class="col-4 control-label fadeIn third"
+            for="streetName">{{'i18n.street-name' | translate}}:</label>
           <input input type="text" class="col-7 form-control fadeIn third" id="streetName" name="streetName"
             [(ngModel)]="credentials.streetName" required minlength="5" maxlength="55" #streetName="ngModel" autofocus
             placeholder="{{'i18n.street-name' | translate}}" />
         </div>
         <div class="row form-group">
-          <label class="col-4 control-label fadeIn third" for="unit">{{'i18n.unit-num' | translate}}:</label>
+          <label [ngStyle]="{'color': whichMode ? '#17242a' : '#f4ff61'}" class="col-4 control-label fadeIn third"
+            for="unit">{{'i18n.unit-num' | translate}}:</label>
           <input input type="number" min="0" class="col-7 form-control fadeIn third" id="unit" name="unit"
             [(ngModel)]="credentials.unit" required minlength="5" maxlength="55" #unit="ngModel" autofocus
             placeholder="{{'i18n.unit-num' | translate}}" />
@@ -100,8 +112,9 @@
 
 
         <div class="row form-group">
-          <label class="col-4 control-label fadeIn third" for="province">Province:</label>
-          <select input type="text" class="col-7 form-control fadeIn third" id="province" name="province"
+          <label [ngStyle]="{'color': whichMode ? '#17242a' : '#f4ff61'}" class="col-4 control-label fadeIn third"
+            for="province">Province:</label>
+          <select input type="text" class="col-7 form-control province" id="province" name="province"
             [(ngModel)]="credentials.province" #province="ngModel" autofocus placeholder="Province">
             <option value="AB">Alberta</option>
             <option value="BC">{{'i18n.bc' | translate}}</option>
@@ -121,8 +134,9 @@
 
 
         <div class="row form-group">
-          <label class="col-4 control-label fadeIn third" for="country">{{'i18n.country' | translate}}:</label>
-          <select input type="text" class="col-7 form-control fadeIn third" id="country" name="country"
+          <label [ngStyle]="{'color': whichMode ? '#17242a' : '#f4ff61'}" class="col-4 control-label fadeIn third"
+            for="country">{{'i18n.country' | translate}}:</label>
+          <select input type="text" class="col-7 form-control country" id="country" name="country"
             [(ngModel)]="credentials.country" required minlength="5" maxlength="55" #country="ngModel" autofocus
             placeholder="{{'i18n.country' | translate}}">
             <option value="Afghanistan">Afghanistan</option>
@@ -376,7 +390,8 @@
 
 
         <div class="row form-group">
-          <label class="col-4 control-label fadeIn third" for="postalCode">{{'i18n.postal' | translate}}:</label>
+          <label [ngStyle]="{'color': whichMode ? '#17242a' : '#f4ff61'}" class="col-4 control-label fadeIn third"
+            for="postalCode">{{'i18n.postal' | translate}}:</label>
           <input input type="text" class="col-7 form-control fadeIn third" id="postalCode" name="postalCode"
             pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" [(ngModel)]="credentials.postalCode" required
             minlength="5" maxlength="55" #postalCode="ngModel" autofocus placeholder="A1A 1A1" />
@@ -393,7 +408,9 @@
           (click)="onSubmit()" />
 
         <span *ngIf="registerError.length > 0" class="text-danger">{{registerError}}</span>
-        <a class="btn back btn-default fadeIn fourth" routerLink='/home'>{{'i18n.back-home' | translate}}</a>
+        <a [ngStyle]="{'background-color': whichMode ? '#F3F3F3' : '#17242a', 'border-color': whichMode ? '#17242a' : '#F3F3F3'}"
+          class="btn back btn-default fadeIn fourth" routerLink='/home'><span
+            [ngStyle]="{'color': whichMode ? '#17242a' : '#d1d1d1'}">{{'i18n.back-home' | translate}}</span></a>
         <!-- <a <a class="btn btn-default" routerLink='/home'>Back to home</a> -->
 
 
