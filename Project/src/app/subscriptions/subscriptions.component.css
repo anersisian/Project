@@ -1,3 +1,5 @@
+
+
 .card {
   min-width: 250px;
   max-width: 250px;
@@ -5,6 +7,9 @@
   padding: 0;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
   font-size: 25px;
+  background-color: #17242a;
+  color: white;
+  border-color: #27aa80;
 }
 
 .grey {
@@ -18,16 +23,27 @@
 .subscriptions {
   height: 100vh;
   background-color: #17242a;
+  background: url(../../assets/images/subscriptionPage.svg) no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .header {
-  margin-top: 5%;
-  color: white;
+  margin-top: 10%;
+  color: #f4ff61;
 }
 
 .btn {
   font-size: 20px;
-  background-color: #5dcfa4;
-  border-radius: 0;
-  border-color: #5dcfa4;
+  background-color: #28db58;
+  border-radius: 5px;
+  border-color: #28db58;
 }
+
+.btn:hover {
+  color: #f4ff61;
+}
+
+

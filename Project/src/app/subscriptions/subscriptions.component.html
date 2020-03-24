@@ -3,7 +3,7 @@
   <div class="header text-center">
     <h1 class="text-center">Featured Subscriptions</h1>
 
-    <p class="grey">TEST INFO: CARD NUMBER: 4242 4242 4242 4242</p>
+    <!-- <p class="grey">TEST INFO: CARD NUMBER: 4242 4242 4242 4242</p> -->
   </div>
   <!--  cards  -->
 
@@ -13,17 +13,18 @@
         <!-- <img src="..." class="card-img-top" alt="..."> -->
         <h5 class="card-header">{{ s.subName }}</h5>
         <div class="card-body">
+          <!-- <img src="https://img.icons8.com/pastel-glyph/64/000000/eggplant--v2.png"/> -->
           <p class="card-text">{{ s.subPeriod }}</p>
           <p class="card-text">{{ s.subBoxType }}</p>
           <p class="card-text">${{ s.subPrice }}/mo</p>
-          <p class="card-text">{{ s.isActive }}</p>
-
+          <!-- <p class="card-text">{{ s.isActive }}</p> -->
+<!-- 
           <button
             (click)="pay(s._id, s.subName, s.subPeriod, s.subBoxType, s.subPrice, s.isActive )"
             class="btn btn-info btn-block"
           >
             Subscribe
-          </button>
+          </button> -->
 
           <button
             (click)="update(s._id, s.subName, s.subPeriod, s.subBoxType, s.subPrice, s.isActive )"
