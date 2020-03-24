@@ -1,52 +1,47 @@
-
-
 .card {
-  min-width: 250px;
-  max-width: 250px;
-  margin: 2rem;
-  padding: 0;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
-  font-size: 25px;
-  background-color: #17242a;
-  color: white;
-  border-color: #27aa80;
+	min-width: 250px;
+	max-width: 250px;
+	margin: 2rem;
+	padding: 0;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+	font-size: 25px;
+
+	color: white;
 }
 
 .grey {
-  color: #a0a0a0;
+	color: #a0a0a0;
 }
 
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
 }
 
 .subscriptions {
-  height: 100vh;
-  background-color: #17242a;
-  background: url(../../assets/images/subscriptionPage.svg) no-repeat center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+	height: 100vh;
+
+	background: url(../../assets/images/subscriptionPage.svg) no-repeat center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 .header {
-  margin-top: 10%;
-  color: #f4ff61;
+	margin-top: 10%;
+	color: #f4ff61;
 }
 
 .btn {
-  font-size: 20px;
-  background-color: #28db58;
-  border-radius: 5px;
-  border-color: #28db58;
+	font-size: 20px;
+	border-radius: 5px;
+	border-color: transparent;
 }
 
 .btn:hover {
-  color: #f4ff61;
+	color: #f4ff61;
 }
 
 #moneyStyle{
   color: #f4ff61;
 }
-

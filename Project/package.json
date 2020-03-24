@@ -23,7 +23,7 @@
     "@angular/router": "~9.0.1",
     "@auth0/angular-jwt": "^4.0.0",
     "@ngx-translate/core": "^12.1.2",
-    "@ngx-translate/http-loader": "^4.0.0",
+
     "@nicky-lenaers/ngx-scroll-to": "^3.0.1",
     "angular-jwt": "^0.1.11",
     "angular-svg-icon": "^8.0.0",

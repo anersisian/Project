@@ -9,7 +9,8 @@
   <app-subscriptions></app-subscriptions>
 </div> -->
 
-<main class="main">
+<main [ngStyle]="{'background-color': whichMode ? '#fbf9fa' : '#17242a'}" class="main">
+
   <section class="firstSection">
     <div class="navB">
       <app-nav-bar></app-nav-bar>
@@ -17,8 +18,10 @@
 
     <div class="introduction">
       <div class="intro-text">
-        <h1>{{ 'i18n.future' | translate }}</h1>
-        <h2>{{ 'i18n.desc' | translate }}</h2>
+
+        <h1 [ngStyle]="{'color': whichMode ? '#17242a' : '#f4ff61'}">{{ 'i18n.future' | translate }}</h1>
+        <h2 [ngStyle]="{'color': whichMode ? '#424a4e' : '#dbe08b'}">{{ 'i18n.desc' | translate }}</h2>
+
       </div>
     </div>
   </section>

@@ -1,7 +1,9 @@
 <div class="container-fluid subscriptions">
   &nbsp;
   <div class="header text-center">
-    <h1 class="text-center">{{'i18n.featured' | translate}}</h1>
+
+    <h1 [ngStyle]="{'color': whichMode ? '#17242a' : '#f4ff61'}" class="text-center">{{'i18n.featured' | translate}}</h1>
+
 
     <!-- <p class="grey">TEST INFO: CARD NUMBER: 4242 4242 4242 4242</p> -->
   </div>
@@ -9,16 +11,17 @@
 
   <div class="row justify-content-md-center">
     <div *ngFor="let s of subscriptions">
-      <div *ngIf="s.isActive" class="card text-center col-4">
+      <div *ngIf="s.isActive" [ngStyle]="{'background-color': whichMode ? '#f3f3f3' : '#17242a'}"
+        class="card text-center col-4">
         <!-- <img src="..." class="card-img-top" alt="..."> -->
-        <h5 class="card-header">{{ s.subName }}</h5>
+        <h5 [ngStyle]="{'color': whichMode ? '#17242a' : '#f3f3f3'}" class="card-header">{{ s.subName }}</h5>
         <div class="card-body">
           <!-- <img src="https://img.icons8.com/pastel-glyph/64/000000/eggplant--v2.png"/> -->
-          <p class="card-text">days: {{ s.subPeriod }}</p>
-          <p class="card-text">{{ s.subBoxType }}</p>
-          <p class="card-text"><span id="moneyStyle">{{ s.subPrice }}$</span> / month</p>
+          <p [ngStyle]="{'color': whichMode ? '#17242a' : '#f3f3f3'}" class="card-text">{{ s.subPeriod }}</p>
+          <p [ngStyle]="{'color': whichMode ? '#17242a' : '#f3f3f3'}" class="card-text">{{ s.subBoxType }}</p>
+          <p [ngStyle]="{'color': whichMode ? '#17242a' : '#f3f3f3'}" class="card-text"><span id="moneyStyle">{{ s.subPrice }}$</span> / month</p>
           <!-- <p class="card-text">{{ s.isActive }}</p> -->
-<!-- 
+          <!-- 
           <button
             (click)="pay(s._id, s.subName, s.subPeriod, s.subBoxType, s.subPrice, s.isActive )"
             class="btn btn-info btn-block"
@@ -28,6 +31,7 @@
 
           <!-- no payment -->
           <button
+            [ngStyle]="{'background-color': whichMode ? '#30EE6E' : '#30EE6E', 'color': whichMode ? '#17242a' : '#17242a'}"
             (click)="update(s._id, s.subName, s.subPeriod, s.subBoxType, s.subPrice, s.isActive )"
             class="btn btn-info btn-block"
           >
