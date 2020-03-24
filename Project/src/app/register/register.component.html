@@ -7,14 +7,14 @@
       <div id="id" class="">
         <i class="material-icons">perm_identity </i>
       </div>
-      <h4 class="text-center fadeIn third"><b>Create Account</b></h4>
+      <h4 class="text-center fadeIn third"><b>{{'i18n.create' | translate}} {{'i18n.acc' | translate}}</b></h4>
 
       <!-- Login Form -->
-      <h4 class ="fadeIn third">Personal Information</h4>
+      <h4 class ="fadeIn third">{{'i18n.info' | translate}}</h4>
       <form (ngSubmit)='onSubmit()' #form='ngForm'>
         <div class = "row form-group">
 
-          <label class="col-4 control-label fadeIn second"  for="userName">User name: </label>
+          <label class="col-4 control-label fadeIn second"  for="userName">{{'i18n.user-name' | translate}}: </label>
           <input input type="text" 
             class="col-7 form-control fadeIn second" 
             required id="userName" name="userName"
@@ -22,7 +22,7 @@
             minlength="7" 
             maxlength="50" 
             #userName="ngModel"
-            placeholder="Enter Email" 
+            placeholder="{{'i18n.enter' | translate}} Email" 
             autofocus />
         </div>
   
@@ -33,10 +33,10 @@
 
 
               <div class="row form-group">
-                <label class="col-4 control-label fadeIn third" for="firstName">First Name:</label>
+                <label class="col-4 control-label fadeIn third" for="firstName">{{'i18n.first-name' | translate}}:</label>
                 <input input type="text" class="col-7 form-control fadeIn third" id="firstName" name="firstName"
                   [(ngModel)]="credentials.firstName" required minlength="5" maxlength="55" #firstName="ngModel" autofocus
-                  placeholder="Enter First Name" />
+                  placeholder="{{'i18n.enter' | translate}} {{'i18n.first-name' | translate}}" />
       
               </div>
               <!-- <span class="help-block" class="text-danger" *ngIf="firstName.errors?.required && firstName.touched">
@@ -46,10 +46,10 @@
 
             
               <div class="row form-group">
-                <label class="col-4 control-label fadeIn third" for="lastName">Last Name:</label>
+                <label class="col-4 control-label fadeIn third" for="lastName">{{'i18n.last-name' | translate}}:</label>
                 <input input type="text" class="col-7 form-control fadeIn third" id="lastName" name="lastName"
                   [(ngModel)]="credentials.lastName" required minlength="5" maxlength="55" #lastName="ngModel" autofocus
-                  placeholder="Enter Last Name" />
+                  placeholder="{{'i18n.enter' | translate}} {{'i18n.last-name' | translate}}" />
               </div>
              
               <!-- <span class="help-block" class="text-danger" *ngIf="lastName.errors?.required && lastName.touched">
@@ -58,47 +58,47 @@
 
 
     <div class="row form-group">
-      <label class="col-4 control-label fadeIn fourth" for="password">Password:</label>
+      <label class="col-4 control-label fadeIn fourth" for="password">{{'i18n.password' | translate}}:</label>
       <input type="password" class="col-7 form-control fadeIn fourth" id="password" name="password"
         [(ngModel)]="credentials.password" minlength="6" maxlength="30" #password="ngModel"
-        placeholder="Enter Password" required />
+        placeholder="{{'i18n.enter' | translate}} {{'i18n.password' | translate}}" required />
     </div>
     
 
     <div class="row form-group">
       <label class="col-4 control-label fadeIn fourth" for="passwordConfirm">
-        Confirm Password:</label>
+        {{'i18n.confirm' | translate}} {{'i18n.password' | translate}}:</label>
       <input type="password" class="col-7 form-control fadeIn fourth" id="passwordConfirm" name="passwordConfirm"
         [(ngModel)]="credentials.passwordConfirm" minlength="6" maxlength="30" #passwordConfirm="ngModel"
-        placeholder="Repeat Password" required />
+        placeholder="{{'i18n.confirm' | translate}} {{'i18n.password' | translate}}" required />
       </div>
 
           <div class="row form-group">
-            <label class="col-4 control-label fadeIn third" for="phoneNumber">Phone Number</label>
+            <label class="col-4 control-label fadeIn third" for="phoneNumber">{{'i18n.phone' | translate}}</label>
             <input input type="text" class="col-7 form-control fadeIn third" id="phoneNumber" name="phoneNumber"
               [(ngModel)]="credentials.phoneNumber" required minlength="5" maxlength="55" #phoneNumber="ngModel" autofocus
               placeholder="416-999-9999" />
           </div>
 
-          <h4 class ="fadeIn third">Shipping address</h4>
+          <h4 class ="fadeIn third">{{'i18n.add' | translate}}</h4>
               <div class="row form-group">
-                <label class="col-4 control-label fadeIn third" for="streetNumber">Street Number:</label>
+                <label class="col-4 control-label fadeIn third" for="streetNumber">{{'i18n.street-num' | translate}}:</label>
                 <input input type="number" min="0" class="col-7 form-control fadeIn third" id="streetNumber" name="streetNumber"
                   [(ngModel)]="credentials.streetNumber" required minlength="5" maxlength="55" #streetNumber="ngModel" autofocus
-                  placeholder="Street Number" />
+                  placeholder="{{'i18n.street-num' | translate}}" />
             </div>
            
               <div class="row form-group">
-                <label class="col-4 control-label fadeIn third" for="streetName">Street Name:</label>
+                <label class="col-4 control-label fadeIn third" for="streetName">{{'i18n.street-name' | translate}}:</label>
                 <input input type="text" class="col-7 form-control fadeIn third" id="streetName" name="streetName"
                   [(ngModel)]="credentials.streetName" required minlength="5" maxlength="55" #streetName="ngModel" autofocus
-                  placeholder="Street Name" />
+                  placeholder="{{'i18n.street-name' | translate}}" />
             </div>
               <div class="row form-group">
-                <label class="col-4 control-label fadeIn third" for="unit">Unit Number:</label>
+                <label class="col-4 control-label fadeIn third" for="unit">{{'i18n.unit-num' | translate}}:</label>
                 <input input type="number" min="0" class="col-7 form-control fadeIn third" id="unit" name="unit"
                   [(ngModel)]="credentials.unit" required minlength="5" maxlength="55" #unit="ngModel" autofocus
-                  placeholder="Unit Number" />
+                  placeholder="{{'i18n.unit-num' | translate}}" />
       
               </div>
             
@@ -110,16 +110,16 @@
                   [(ngModel)]="credentials.province"  #province="ngModel" autofocus
                   placeholder="Province">
                   <option value="AB">Alberta</option>
-                  <option value="BC">British Columbia</option>
+                  <option value="BC">{{'i18n.bc' | translate}}</option>
                   <option value="MB">Manitoba</option>
-                  <option value="NB">New Brunswick</option>
-                  <option value="NL">Newfoundland and Labrador</option>
-                  <option value="NS">Nova Scotia</option>
+                  <option value="NB">{{'i18n.nb' | translate}}</option>
+                  <option value="NL">{{'i18n.nwf' | translate}}</option>
+                  <option value="NS">{{'i18n.ns' | translate}}</option>
                   <option value="ON">Ontario</option>
-                  <option value="PE">Prince Edward Island</option>
+                  <option value="PE">{{'i18n.pei' | translate}}</option>
                   <option value="QC">Quebec</option>
                   <option value="SK">Saskatchewan</option>
-                  <option value="NT">Northwest Territories</option>
+                  <option value="NT">{{'i18n.nwt' | translate}}</option>
                   <option value="NU">Nunavut</option>
                   <option value="YT">Yukon</option>
                 </select>
@@ -127,10 +127,10 @@
     
         
               <div class="row form-group">
-                <label class="col-4 control-label fadeIn third" for="country">Country:</label>
+                <label class="col-4 control-label fadeIn third" for="country">{{'i18n.country' | translate}}:</label>
                 <select input type="text" class="col-7 form-control fadeIn third" id="country" name="country"
                   [(ngModel)]="credentials.country" required minlength="5" maxlength="55" #country="ngModel" autofocus
-                  placeholder="Country">
+                  placeholder="{{'i18n.country' | translate}}">
                   <option value="Afghanistan">Afghanistan</option>
                 <option value="Åland Islands">Åland Islands</option>
                 <option value="Albania">Albania</option>
@@ -380,7 +380,7 @@
   
 
               <div class="row form-group">
-                <label class="col-4 control-label fadeIn third" for="postalCode">Postal Code:</label>
+                <label class="col-4 control-label fadeIn third" for="postalCode">{{'i18n.postal' | translate}}:</label>
                 <input input type="text" class="col-7 form-control fadeIn third" id="postalCode" name="postalCode" pattern ="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]"
                   [(ngModel)]="credentials.postalCode" required minlength="5" maxlength="55" #postalCode="ngModel" autofocus
                   placeholder="A1A 1A1" />
@@ -393,11 +393,11 @@
 
           
 
-        <input type="submit" class="fadeIn fourth" value="Register" [disabled]="!form.form.valid"
+        <input type="submit" class="fadeIn fourth" value="{{'i18n.reg' | translate}}" [disabled]="!form.form.valid"
           (click)="onSubmit()" />
           
         <span *ngIf="registerError.length > 0" class="text-danger">{{registerError}}</span>
-        <a class="btn back btn-default fadeIn fourth" routerLink='/home'>Back to home</a>
+        <a class="btn back btn-default fadeIn fourth" routerLink='/home'>{{'i18n.back-home' | translate}}</a>
         <!-- <a <a class="btn btn-default" routerLink='/home'>Back to home</a> -->
 
 

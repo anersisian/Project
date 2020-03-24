@@ -37,22 +37,22 @@
           class="nav-link"
           routerLink="/account-page/{{ userProfile }}"
           routerLinkActive="active"
-          >Account</a
+          >{{'i18n.acc' | translate}}</a
         >
       </li>
       <li *ngIf="!isLogged">
         <a class="nav-link" routerLink="/login" routerLinkActive="active"
-          >LogIn</a
+          >{{'i18n.login' | translate}}</a
         >
       </li>
       <li *ngIf="isLogged">
         <a class="nav-link" routerLink="/logout" routerLinkActive="active"
-          >LogOut</a
+          >{{'i18n.logout' | translate}}</a
         >
       </li>
       <li>
         <a class="nav-link" routerLink="/register" routerLinkActive="active"
-          >Register</a
+          >{{'i18n.reg' | translate}}</a
         >
       </li>
     </ul>

@@ -7,7 +7,7 @@
   <div class="row">
     <div class="col">
       <div class="text-left">
-        <div class="h1">Account</div>
+        <div class="h1">{{'i18n.acc' | translate}}</div>
         <hr>
       </div>
     </div>
@@ -15,11 +15,11 @@
 
   <div class="row">
     <div class="col-md-3" *ngIf="user">
-      <h2 style="color: grey;">Personal Info</h2>
+      <h2 style="color: grey;">{{'i18n.info' | translate}}</h2>
     </div>
     <div class="col-md-6"  >
 
-      <h4>Username: {{user.userName}} </h4>
+      <h4>{{'i18n.user-name' | translate}}: {{user.userName}} </h4>
       
     </div>
     <div class="col-md text-right"  >
@@ -32,11 +32,11 @@
     </div>
     <div class="col-md-6"  >
 
-      <h4>Password: ****** </h4>
+      <h4>{{'i18n.password' | translate}}: ****** </h4>
 
     </div>
     <div class="col-md text-right">
-      <button class="btn btn-outline-success btn-lg same">Change Password</button>
+      <button class="btn btn-outline-success btn-lg same">{{'i18n.update' | translate}} {{'i18n.password' | translate}}</button>
     </div>
   </div>
 
@@ -47,11 +47,11 @@
     </div>
     <div class="col-md-6">
 
-      <h4>Address: {{user.streetNumber}} {{user.streetName}}, {{user.unit}}, {{user.province}} {{user.country}}</h4>
+      <h4>{{'i18n.add' | translate}}: {{user.streetNumber}} {{user.streetName}}, {{user.unit}}, {{user.province}} {{user.country}}</h4>
       
     </div>
     <div class="col-md text-right"  >
-    <button class="btn btn-outline-success btn-lg same">Change Address</button>
+    <button class="btn btn-outline-success btn-lg same">{{'i18n.update' | translate}} {{'i18n.add' | translate}}</button>
     </div>
   </div>
   <!-- row 4 -->
@@ -61,10 +61,10 @@
     </div>
     <div class="col-md-6">
 
-      <h4>Phone number: {{user.phoneNumber}}</h4>
+      <h4>{{'i18n.phone' | translate}}: {{user.phoneNumber}}</h4>
     </div>
     <div class="col-md text-right" *ngFor="let u of [user]">
-    <button (click)="editPhone(u.userName)" class=" btn btn-outline-success btn-lg same">Change Phone Number</button>
+    <button (click)="editPhone(u.userName)" class=" btn btn-outline-success btn-lg same">{{'i18n.update' | translate}} {{'i18n.phone' | translate}}</button>
     </div>
   </div>
   <!-- Subscription Info -->
@@ -72,17 +72,17 @@
 
   <div class="row" *ngFor="let s of user.subscriptionInfo">
     <div class="col-md-3">
-      <h2 style="color: grey;">Subscription Info</h2>
+      <h2 style="color: grey;">{{'i18n.sub-info' | translate}}</h2>
     </div>
     <div class="col-md-6"  >
 
-      <h4>Subcription Name          : {{s.subName}} </h4>
-      <h4>Subscription Period       : {{s.subPeriod}}</h4>
-      <h4>Subscription Box Type     : {{s.subBoxType}}</h4>
-      <h4>Subscription Delivery Date: {{s.date}}</h4>
+      <h4>{{'i18n.sub-name' | translate}}          : {{s.subName}} </h4>
+      <h4>{{'i18n.sub-period' | translate}}       : {{s.subPeriod}}</h4>
+      <h4>{{'i18n.sub-type' | translate}}     : {{s.subBoxType}}</h4>
+      <h4>{{'i18n.sub-del' | translate}}: {{s.date}}</h4>
     </div>
     <div class="col-md text-right"  >
-      <button class=" btn btn-outline-danger btn-lg same">Cancel Subscription</button>
+      <button class=" btn btn-outline-danger btn-lg same">{{'i18n.sub-can' | translate}}</button>
     </div>
   </div>
   <!--  -->

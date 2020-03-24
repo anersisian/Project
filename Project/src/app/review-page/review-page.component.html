@@ -3,24 +3,24 @@
 
     <div class="wrapper fadeInDown">
      
-            <label for="Comment">Please leave a review</label>
+            <label for="Comment">{{'i18n.review' | translate}}</label>
             <textarea class="form-control" #Comment style="max-width: 60%" rows="10"></textarea>  
             
                   <div class="col-md-6">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" value="good"  #good id="defaultCheck1" name="check1">
+                        <input class="form-check-input" type="radio" value="{{'i18n.good' | translate}}"  #good id="defaultCheck1" name="check1">
                         <label class="form-check-label" for="defaultCheck1">
-                          Overall Good
+                          {{'i18n.good' | translate}}
                         </label>
                       </div>
                   </div>
 
                   <div class="col-md-6">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" #bad id="defaultCheck2" value="bad" name="check1"
+                        <input class="form-check-input" type="radio" #bad id="defaultCheck2" value="{{'i18n.bad' | translate}}" name="check1"
                         >
                         <label class="form-check-label" for="defaultCheck2">
-                          Overall Bad
+                          {{'i18n.bad' | translate}}
                         </label>     
                          </div>
               </div>
@@ -28,10 +28,10 @@
            
               <div class="row">
                 <div class="col-md-6">
-                  <button type="submit" (click)="submit(Comment.value, bad.checked ? bad.value : good.value)" style="margin: .5em;"  class="btn btn-outline-success">Submit</button>
+                  <button type="submit" (click)="submit(Comment.value, bad.checked ? bad.value : good.value)" style="margin: .5em;"  class="btn btn-outline-success">{{'i18n.submit' | translate}}</button>
                 </div>
                 <div class="col-md-6">
-                  <button type="submit" routerLink="/account-page/{{user.userName}}" style="margin: .5em;"  class="btn btn-outline-success">Back </button>
+                  <button type="submit" routerLink="/account-page/{{user.userName}}" style="margin: .5em;"  class="btn btn-outline-success">{{'i18n.back-home' | translate}} </button>
                 </div>
               </div>
               
