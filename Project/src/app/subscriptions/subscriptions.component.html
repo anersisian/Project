@@ -14,9 +14,9 @@
         <h5 class="card-header">{{ s.subName }}</h5>
         <div class="card-body">
           <!-- <img src="https://img.icons8.com/pastel-glyph/64/000000/eggplant--v2.png"/> -->
-          <p class="card-text">{{ s.subPeriod }}</p>
+          <p class="card-text">days: {{ s.subPeriod }}</p>
           <p class="card-text">{{ s.subBoxType }}</p>
-          <p class="card-text">${{ s.subPrice }}/mo</p>
+          <p class="card-text"><span id="moneyStyle">{{ s.subPrice }}$</span> / month</p>
           <!-- <p class="card-text">{{ s.isActive }}</p> -->
 <!-- 
           <button
@@ -26,17 +26,17 @@
             Subscribe
           </button> -->
 
+          <!-- no payment -->
           <button
             (click)="update(s._id, s.subName, s.subPeriod, s.subBoxType, s.subPrice, s.isActive )"
             class="btn btn-info btn-block"
           >
-            Test
+            Subscribe
           </button>
         </div>
       </div>
     </div>
     <div class="md-col-12">
       <!-- <a routerLink="/subscriptions" class="btn btn-primary">More Options</a> -->
-    </div>
   </div>
 </div>
