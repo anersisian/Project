@@ -1,18 +1,24 @@
 main {
   width: 100%;
-  height: 150%;
-  background-color: #17242a;
+  height: 100%;
   color: white;
+  background: url(../../assets/images/accountPage.svg) no-repeat center;
+  background-color: #17242a;
+  -webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 .tableStyle {
   width: 100%;
 }
 
+
 td,
 tr {
   /* padding: 1% 0 0 10%; */
   padding: .5em;
-  border: 1px solid black;
+  border: 1px solid #27aa80;
   /* border-collapse: collapse; */
 }

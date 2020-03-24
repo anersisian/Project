@@ -6,7 +6,7 @@
       <a routerLink="/home" routerLinkActive="active"><span
           [ngStyle]="{'color': whichMode ? '#17242a' : '#f4ff61'}">C-KIOSK</span></a>
     </h4>
-    
+
   </div>
   <nav class="stroke">
     <ul class="nav-links">
@@ -35,13 +35,13 @@
 
       </li>
       <li>
-        <a 
-        class="btn" (click)="useLanguage('en')">EN
+        <a class="btn language languageMain" (click)="useLanguage('en')"><span
+            [ngStyle]="{'color': whichMode ? '#17242a' : '#f4ff61'}">EN</span>
         </a>
       </li>
       <li>
-        <a class="btn"
-          (click)="useLanguage('fr')">FR
+        <a class="btn language" (click)="useLanguage('fr')"><span
+            [ngStyle]="{'color': whichMode ? '#17242a' : '#f4ff61'}">FR</span>
         </a>
       </li>
     </ul>
