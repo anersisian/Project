@@ -32,8 +32,6 @@ export class RegisterComponent implements OnInit {
     this.credentials.province="";
     this.credentials.country="";
     this.credentials.postalCode="";
-
-  
     this.credentials.isAdmin = false;
 
   }
