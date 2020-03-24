@@ -1,16 +1,16 @@
 <div class="container">
   <hr>
-  <h3 class="text-center">List of Users </h3>
+  <h3 class="text-center">{{'i18n.user-list' | translate}} </h3>
   <hr/>
   <p>&nbsp;</p>
   <!-- <div style="height: 45em; overflow: auto"> -->
   <table class="table table-striped table-bordered">
     <thead class="thead-dark">
       <tr>
-        <th>User Name</th>
-        <th>Full Name</th>
+        <th>{{'i18n.user-name' | translate}}</th>
+        <th>{{'i18n.full-name' | translate}}</th>
         <th>Admin?</th>
-        <th>Activated?</th>
+        <th>{{'i18n.activated' | translate}}?</th>
         <th></th>
         <th></th>
       </tr>
@@ -23,7 +23,7 @@
         <td>{{ u.statusActivated}}</td>
         <!-- <td></td> -->
         <td *ngFor="let sub of [u.subscriptionInfo]">{{sub.length}}</td>
-        <td><button (click)="deleteUser(u._id)" type="button" class="btn btn-danger">Delete</button></td>
+        <td><button (click)="deleteUser(u._id)" type="button" class="btn btn-danger">{{'i18n.delete' | translate}}</button></td>
       </tr>
     </tbody>
   </table>
@@ -34,49 +34,49 @@
       <div class="col-md-3"></div>
       <div class="col-md-6 col-sm-12" id="Subscription-form">
         <hr>
-        <h4 class="text-center"><b>Create Subscription</b></h4>
+        <h4 class="text-center"><b>{{'i18n.create-sub' | translate}}</b></h4>
         <hr />
 
          <form (ngSubmit)="onSubmit()" #form="ngForm">
            <div class="form-group">
-             <label class="control-label" for="subName">Subscription name:</label>
+             <label class="control-label" for="subName">{{'i18n.sub-name' | translate}}:</label>
              <input class="form-control" type="email" required email id="subName" name="subName"
                [(ngModel)]="subscription.subName" minlength="4" maxlength="50" #subName="ngModel"
-               placeholder="Enter Subscription Name" required autofocus />
+               placeholder="{{'i18n.enter' | translate}} {{'i18n.sub-name' | translate}}" required autofocus />
            </div>
 
            <div class="form-group">
-             <label class="control-label" for="subPeriod">Subscription Period:</label>
+             <label class="control-label" for="subPeriod">{{'i18n.sub-period' | translate}}:</label>
              <input type="number" class="form-control" id="subPeriod" name="subPeriod"
                [(ngModel)]="subscription.subPeriod" required min="1" max="365" #subPeriod="ngModel" autofocus
-               placeholder="Enter Subscription Period" />
+               placeholder="{{'i18n.enter' | translate}} {{'i18n.sub-period' | translate}}" />
            </div>
 
            <div class="form-group">
-             <label class="control-label" for="subBoxType">Subscription Box Type:</label>
+             <label class="control-label" for="subBoxType">{{'i18n.sub-type' | translate}}:</label>
              <input class="form-control" type="email" required email id="subBoxType" name="subBoxType"
                [(ngModel)]="subscription.subBoxType" minlength="4" maxlength="50" #subBoxType="ngModel"
-               placeholder="Enter Subscription Box type" required autofocus />
+               placeholder="{{'i18n.enter' | translate}} {{'i18n.sub-type' | translate}}" required autofocus />
            </div>
 
            <div class="form-group">
-             <label class="control-label" for="subPrice">Subscription Price:</label>
+             <label class="control-label" for="subPrice">{{'i18n.sub-price' | translate}}:</label>
              <input type="number" class="form-control" id="subPrice" name="subPrice" [(ngModel)]="subscription.subPrice"
-               required min="1" step="any" #subPrice="ngModel" autofocus placeholder="Enter Subscription Price" />
+               required min="1" step="any" #subPrice="ngModel" autofocus placeholder="{{'i18n.enter' | translate}} {{'i18n.sub-price' | translate}}" />
            </div>
 
            <div class="form-check form-check-inline">
-                 <label class="form-check-input" for="isActiveTrue">Yes:</label>
+                 <label class="form-check-input" for="isActiveTrue">{{'i18n.yes' | translate}}:</label>
                  <input type="radio" class="form-check-input" id="isActiveTrue" name="isActiveTrue" value="true"
                    [(ngModel)]="subscription.isActive" required #isActive="ngModel" autofocus />
-                   <label class="form-check-input" for="isActiveFalse">No:</label>
+                   <label class="form-check-input" for="isActiveFalse">{{'i18n.no' | translate}}:</label>
                  <input type="radio" class="form-check-input" id="isActiveFalse" name="isActiveFalse" value="false"
                    [(ngModel)]="subscription.isActive" required #isActive="ngModel" autofocus />
           </div>
           
           <div class="text-center">
-            <a class="btn btn-default" routerLink="/home">Back to home</a>&nbsp;
-            <a><button class="btn btn-primary" type="submit">Create</button></a>&nbsp;&nbsp;
+            <a class="btn btn-default" routerLink="/home">{{'i18n.back-home' | translate}}</a>&nbsp;
+            <a><button class="btn btn-primary" type="submit">{{'i18n.create' | translate}}</button></a>&nbsp;&nbsp;
             <!-- Causes bug which prevents from table rendering -->
             <!-- <span *ngIf="subError.length > 0" class="text-danger">{{subError}}</span> -->
           </div>
@@ -88,18 +88,18 @@
 
 <!-- Delete Subscription -->
 <hr/>
-<h3 class="text-center">Delete Subscription </h3>
+<h3 class="text-center">{{'i18n.del-sub' | translate}} </h3>
 <hr />
 
 <p>&nbsp;</p>
  <table class="table table-striped table-bordered">
    <thead class="thead-dark">
      <tr>
-       <th>Subscription Name</th>
-       <th>Period</th>
-       <th>Box Type</th>
-       <th>Price</th>
-       <th>Activated?</th>
+       <th>{{'i18n.sub-name' | translate}}</th>
+       <th>{{'i18n.sub-period' | translate}}</th>
+       <th>{{'i18n.sub-type' | translate}}</th>
+       <th>{{'i18n.sub-price' | translate}}</th>
+       <th>{{'i18n.activated' | translate}}?</th>
        <th></th>
        <th></th>
      </tr>
@@ -111,24 +111,24 @@
        <td>{{ s.subBoxType }}</td>
        <td>{{ s.subPrice}}</td>
        <td>{{ s.isActive}}</td>
-       <td><button (click)="editSubscription(s._id)" type="button" class="btn btn-warning">Edit</button></td>
-       <td><button (click)="deleteSubscription(s._id)" type="button" class="btn btn-danger">Delete</button></td>
+       <td><button (click)="editSubscription(s._id)" type="button" class="btn btn-warning">{{'i18n.edit' | translate}}</button></td>
+       <td><button (click)="deleteSubscription(s._id)" type="button" class="btn btn-danger">{{'i18n.delete' | translate}}</button></td>
      </tr>
    </tbody>
  </table>
 
  <!-- Reviws -->
 <hr/>
-<h3 class="text-center"> Reviews </h3>
+<h3 class="text-center"> {{'i18n.reviews' | translate}}s </h3>
 <hr />
 
 <p>&nbsp;</p>
  <table class="table table-striped table-bordered">
    <thead class="thead-dark">
      <tr>
-       <th>User</th>
-       <th>Rating</th>
-       <th>Review</th>
+       <th>{{'i18n.user' | translate}}</th>
+       <th>{{'i18n.rating' | translate}}</th>
+       <th>{{'i18n.reviews' | translate}}</th>
        <th>Date</th>
      </tr>
    </thead>

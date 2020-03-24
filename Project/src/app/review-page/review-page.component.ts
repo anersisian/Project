@@ -27,6 +27,7 @@ export class ReviewPageComponent implements OnInit {
   constructor(private m: DataModelManagerService,
     private route: ActivatedRoute,
     private router: Router,
+    
      private http: HttpClient) { 
 
           //safe empty state for our payload
@@ -86,6 +87,7 @@ submit(comment: String, value) : void {
           }
         }
       )
+      this.router.navigate(["/account-page/", this.user.userName]);
     });
  
 }

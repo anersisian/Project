@@ -7,6 +7,7 @@ import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { HttpErrorResponse } from '@angular/common/http';
+import { TranslateService } from '@ngx-translate/core';
 
 
 @Component({
@@ -19,7 +20,8 @@ export class NavBarComponent implements OnInit {
   isLogged: Boolean;
   userProfile: String;
   constructor(private m: DataModelManagerService, private route: ActivatedRoute,  private a: AuthService,
-    private jwtHelper: JwtHelperService,  private router: Router,) {
+    private jwtHelper: JwtHelperService,  private router: Router, private translate: TranslateService) {
+    translate.setDefaultLang('en');
 
     this.isLogged  = JSON.parse(localStorage.getItem("logged"));
 
@@ -30,6 +32,10 @@ export class NavBarComponent implements OnInit {
       this.userProfile = tokenDecoded.userName;
     }
    }
+
+   useLanguage(language: string) {
+    this.translate.use(language);
+}
 
   ngOnInit() {
   }

@@ -44,4 +44,9 @@ export class AuthService {
     // ##### EDIT the following to match the path to your web API login resource
     return this.http.post<any>(`${this.url}/api/users/login`, credentials);
   }
+  
+  sendEmail(url, data) {
+    return this.http.post(url, data);
+  }
+
 }
